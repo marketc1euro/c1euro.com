@@ -1,0 +1,3 @@
+User-agent: *
+Disallow:
+Sitemap: https://c1euro.com/sitemap.xml
