@@ -3,7 +3,7 @@
     <title>c1euro.com</title>
     <link href="https://c1euro.pages.dev/feed.xml" rel="self" />
     <link href="https://c1euro.pages.dev" />
-    <updated>2025-05-29T16:38:16+02:00</updated>
+    <updated>2025-05-29T23:05:58+02:00</updated>
     <author>
         <name>c1euro</name>
     </author>
@@ -16,11 +16,13 @@
         </author>
         <link href="https://c1euro.pages.dev/app-c1euro/"/>
         <id>https://c1euro.pages.dev/app-c1euro/</id>
+        <media:content url="https://c1euro.pages.dev/media/posts/3/C1euro01.svg" medium="image" />
 
         <updated>2025-05-29T14:41:27+02:00</updated>
             <summary></summary>
         <content type="html">
             <![CDATA[
+                    <p><img src="https://c1euro.pages.dev/media/posts/3/C1euro01.svg" class="type:primaryImage" alt="" /></p>
                 <p> </p>
 <h1 class="align-center"><span style="color: #000000;">l;k,onjnn jnj. </span></h1>
 <p> </p>
