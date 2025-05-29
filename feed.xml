@@ -3,7 +3,7 @@
     <title>c1euro.com</title>
     <link href="https://c1euro.pages.dev/feed.xml" rel="self" />
     <link href="https://c1euro.pages.dev" />
-    <updated>2025-05-29T14:42:12+02:00</updated>
+    <updated>2025-05-29T16:35:13+02:00</updated>
     <author>
         <name>c1euro</name>
     </author>
@@ -18,10 +18,15 @@
         <id>https://c1euro.pages.dev/app-c1euro/</id>
 
         <updated>2025-05-29T14:41:27+02:00</updated>
-            <summary></summary>
+            <summary>
+                <![CDATA[
+                    l;k,onjnn jnj. 
+                ]]>
+            </summary>
         <content type="html">
             <![CDATA[
                 <figure class="post__image post__image--center"><img loading="lazy"  src="https://c1euro.pages.dev/media/posts/3//HOME6.webp" alt="" width="2200" height="1485" sizes="(min-width: 760px) 660px, calc(93.18vw - 30px)" srcset="https://c1euro.pages.dev/media/posts/3//responsive/HOME6-xs.webp 320w ,https://c1euro.pages.dev/media/posts/3//responsive/HOME6-sm.webp 480w ,https://c1euro.pages.dev/media/posts/3//responsive/HOME6-md.webp 768w ,https://c1euro.pages.dev/media/posts/3//responsive/HOME6-xl.webp 1024w"></figure>
+<p>l;k,onjnn jnj. </p>
             ]]>
         </content>
     </entry>
