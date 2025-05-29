@@ -92,14 +92,20 @@
         .then(html => {
           const parser = new DOMParser();
           const doc = parser.parseFromString(html, 'text/html');
-
-          // Sélectionne uniquement le contenu principal
           const mainContent = doc.querySelector('.content__entry');
 
           if (mainContent) {
             document.getElementById('popup-body-content').innerHTML = mainContent.innerHTML;
             document.getElementById('mobile-popup').classList.remove('popup-hidden');
+          } else {
+            console.warn("⚠️ .content__entry introuvable dans la page /app-c1euro");
+            // fallback : afficher tout le <body>
+            document.getElementById('popup-body-content').innerHTML = doc.body.innerHTML;
+            document.getElementById('mobile-popup').classList.remove('popup-hidden');
           }
+        })
+        .catch(err => {
+          console.error("Erreur lors du fetch : ", err);
         });
     }
   });
