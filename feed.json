@@ -10,5 +10,18 @@
         "name": "c1euro"
     },
     "items": [
+        {
+            "id": "https://c1euro.pages.dev/app-c1euro/",
+            "url": "https://c1euro.pages.dev/app-c1euro/",
+            "title": "app c1euro",
+            "content_html": "<figure class=\"post__image post__image--center\"><img loading=\"lazy\"  src=\"https://c1euro.pages.dev/media/posts/3//HOME6.webp\" alt=\"\" width=\"2200\" height=\"1485\" sizes=\"(min-width: 760px) 660px, calc(93.18vw - 30px)\" srcset=\"https://c1euro.pages.dev/media/posts/3//responsive/HOME6-xs.webp 320w ,https://c1euro.pages.dev/media/posts/3//responsive/HOME6-sm.webp 480w ,https://c1euro.pages.dev/media/posts/3//responsive/HOME6-md.webp 768w ,https://c1euro.pages.dev/media/posts/3//responsive/HOME6-xl.webp 1024w\"></figure>",
+            "author": {
+                "name": "c1euro"
+            },
+            "tags": [
+            ],
+            "date_published": "2025-05-29T14:41:27+02:00",
+            "date_modified": "2025-05-29T14:42:12+02:00"
+        }
     ]
 }
