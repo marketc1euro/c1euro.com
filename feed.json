@@ -14,15 +14,14 @@
             "id": "https://c1euro.pages.dev/app-c1euro/",
             "url": "https://c1euro.pages.dev/app-c1euro/",
             "title": "app c1euro",
-            "summary": "l;k,onjnn jnj. ",
-            "content_html": "<figure class=\"post__image post__image--center\"><img loading=\"lazy\"  src=\"https://c1euro.pages.dev/media/posts/3//HOME6.webp\" alt=\"\" width=\"2200\" height=\"1485\" sizes=\"(min-width: 760px) 660px, calc(93.18vw - 30px)\" srcset=\"https://c1euro.pages.dev/media/posts/3//responsive/HOME6-xs.webp 320w ,https://c1euro.pages.dev/media/posts/3//responsive/HOME6-sm.webp 480w ,https://c1euro.pages.dev/media/posts/3//responsive/HOME6-md.webp 768w ,https://c1euro.pages.dev/media/posts/3//responsive/HOME6-xl.webp 1024w\"></figure>\n<p>l;k,onjnn jnj. </p>",
+            "content_html": "<p> </p>\n<h1 class=\"align-center\"><span style=\"color: #000000;\">l;k,onjnn jnj. </span></h1>\n<p> </p>\n<figure class=\"post__image post__image--center\"><img loading=\"lazy\"  src=\"https://c1euro.pages.dev/media/posts/3/38fff7887e72fc2a06869586d6d198ad.webp\" alt=\"\" width=\"100\" height=\"100\" sizes=\"(min-width: 760px) 660px, calc(93.18vw - 30px)\" srcset=\"https://c1euro.pages.dev/media/posts/3/responsive/38fff7887e72fc2a06869586d6d198ad-xs.webp 320w ,https://c1euro.pages.dev/media/posts/3/responsive/38fff7887e72fc2a06869586d6d198ad-sm.webp 480w ,https://c1euro.pages.dev/media/posts/3/responsive/38fff7887e72fc2a06869586d6d198ad-md.webp 768w ,https://c1euro.pages.dev/media/posts/3/responsive/38fff7887e72fc2a06869586d6d198ad-xl.webp 1024w\"></figure>",
             "author": {
                 "name": "c1euro"
             },
             "tags": [
             ],
             "date_published": "2025-05-29T14:41:27+02:00",
-            "date_modified": "2025-05-29T16:35:13+02:00"
+            "date_modified": "2025-05-29T16:37:02+02:00"
         }
     ]
 }
