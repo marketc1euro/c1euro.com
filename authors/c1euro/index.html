@@ -94,4 +94,22 @@
                     this.classList.add('is-loaded');
                 }, false);
             }
-        }</script></body></html>
+        }</script><script>window.addEventListener("load", function() {
+    var images = document.querySelectorAll('img[loading]');
+    for (var i = 0; i < images.length; i++) {
+        if (images[i].classList.contains('is-loaded')) {
+            setupImage(images[i]);
+        } else {
+            images[i].addEventListener('load', function () {
+                setupImage(this);
+            }, false);
+        }
+    }
+
+    function setupImage(img) {
+        if (!img.classList.contains("image-scroll")) {
+            img.classList.add("image-scroll");
+            // Suppression du curseur pointer et du clic pour scroll
+        }
+    }
+});</script></body></html>
