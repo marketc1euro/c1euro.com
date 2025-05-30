@@ -1,12 +1,12 @@
 <?xml version="1.0" encoding="utf-8"?>
 <feed xmlns="http://www.w3.org/2005/Atom" xmlns:media="http://search.yahoo.com/mrss/">
     <title>c1euro.com</title>
-    <link href="https://c1euro.com/feed.xml" rel="self" />
-    <link href="https://c1euro.com" />
+    <link href="https://c1euro.pages.dev/feed.xml" rel="self" />
+    <link href="https://c1euro.pages.dev" />
     <updated>1970-01-01T01:00:00+01:00</updated>
     <author>
         <name>c1euro</name>
     </author>
-    <id>https://c1euro.com</id>
+    <id>https://c1euro.pages.dev</id>
 
 </feed>
