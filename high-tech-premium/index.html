@@ -107,8 +107,7 @@ C1EURO réunit les meilleures marques high-tech du marché. "><meta property=
   overflow:auto;
   z-index:9999;"><button id="popupCloseBtn" style="position:fixed;
     top:20px;
-    left:50%;
-    transform:translateX(-50%);
+    right:20px;
     background:#eee;
     color:#000;
     border:none;
@@ -116,10 +115,13 @@ C1EURO réunit les meilleures marques high-tech du marché. "><meta property=
     width:40px;
     height:40px;
     font-size:24px;
+    font-weight:bold;
     cursor:pointer;
     z-index:10000;
-    line-height:38px;
-    text-align:center;">×</button><div id="popupContent" style="width:100%;
+    display:flex;
+    align-items:center;
+    justify-content:center;
+    line-height:1;">×</button><div id="popupContent" style="width:100%;
     min-height:100%;
     padding:30px;
     box-sizing:border-box;
@@ -155,12 +157,12 @@ C1EURO réunit les meilleures marques high-tech du marché. "><meta property=
           document.head.appendChild(clone);
         });
 
-        // Afficher contenu
+        // Afficher le contenu
         document.getElementById('popupContent').innerHTML = main.innerHTML;
         document.getElementById('popupOverlay').style.display = 'block';
         document.body.style.overflow = 'hidden';
 
-        // Marquer comme vu
+        // Marquer comme déjà affiché
         localStorage.setItem('popupAlreadyShown', '1');
       })
       .catch(e => console.error("Erreur pop-up :", e));
