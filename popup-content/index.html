@@ -95,7 +95,7 @@
     background:#f00; color:#fff; border:none; border-radius:50%;
     width:35px; height:35px; cursor:pointer;
     z-index:10000;">×</button><div id="popupContent" style="background:#fff; max-width:90vw; max-height:90vh; margin:auto; padding:15px; overflow:auto; border-radius:8px;"></div></div><script>function openPopup() {
-    fetch('popup-content.html')
+    fetch('popup-content')
       .then(r => r.text())
       .then(html => {
         const parser = new DOMParser();
