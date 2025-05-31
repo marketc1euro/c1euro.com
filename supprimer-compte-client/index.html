@@ -71,20 +71,40 @@
     const scrollBtn = document.getElementById("scroll-down-btn");
     const launchBtn = document.getElementById("launch-app-btn");
 
+    // Récupère le compteur dans localStorage, ou initialise à 2
+    let clickCount = parseInt(localStorage.getItem("buttonClicks") || "2");
+
+    // Si le compteur est à 0 ou moins, on masque les boutons directement
+    if (clickCount <= 0) {
+        if (scrollBtn) scrollBtn.style.display = "none";
+        if (launchBtn) launchBtn.style.display = "none";
+        return;
+    }
+
     // Clique sur bouton de scroll
     scrollBtn.addEventListener("click", function () {
         window.scrollBy({
             top: window.innerHeight,
             behavior: "smooth"
         });
-        scrollBtn.style.display = "none";
+        decrementClickCount();
     });
 
     // Clique sur bouton "Lancer l'application"
     launchBtn.addEventListener("click", function () {
-        launchBtn.style.display = "none";
         window.location.href = "https://link.c1euro.com/qrcode";
+        decrementClickCount();
     });
+
+    function decrementClickCount() {
+        clickCount--;
+        localStorage.setItem("buttonClicks", clickCount);
+
+        if (clickCount <= 0) {
+            if (scrollBtn) scrollBtn.style.display = "none";
+            if (launchBtn) launchBtn.style.display = "none";
+        }
+    }
 });</script><script defer="defer" src="https://static.cloudflareinsights.com/beacon.min.js" data-cf-beacon='{"token": "fa51fcb66a4a439b8df347aefc247af7"}'></script><div class="container"><div class="left-bar"><div class="left-bar__inner"><header class="header"><a class="logo" href="https://c1euro.com/"><img src="https://c1euro.com/media/website/LOGO67-2.svg" alt="c1euro.com" width="46" height="46"></a><nav class="navbar"><button class="navbar__toggle" aria-label="Menu" aria-haspopup="true" aria-expanded="false"><span class="navbar__toggle__box"><span class="navbar__toggle__inner">Menu</span></span></button><ul class="navbar__menu"><li><a class="tltp" href="https://c1euro.com/" target="_self" aria-label="Accueil"><svg class="fi fi-home" width="24px" height="24px" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24"><use href="https://c1euro.com/media/plugins/featherIcons/feather-sprite.svg#home"/></svg> <span>Accueil</span></a></li><li><a class="tltp" href="https://c1euro.com/nos-categories/" target="_self" aria-label="Nos catégories"><svg class="fi fi-tablet" width="24px" height="24px" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24"><use href="https://c1euro.com/media/plugins/featherIcons/feather-sprite.svg#tablet"/></svg> <span>Nos catégories</span></a></li><li><a class="tltp" href="https://c1euro.com/vendre-sur-application-c1euro/" target="_self" aria-label="Devenez vendeur"><svg class="fi fi-smile" width="24px" height="24px" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24"><use href="https://c1euro.com/media/plugins/featherIcons/feather-sprite.svg#smile"/></svg> <span>Devenez vendeur</span></a></li><li><a class="tltp" href="https://c1euro.com/contactez-nous/" target="_self" aria-label="Contactez-nous"><svg class="fi fi-mail" width="24px" height="24px" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24"><use href="https://c1euro.com/media/plugins/featherIcons/feather-sprite.svg#mail"/></svg> <span>Contactez-nous</span></a></li><li><a class="tltp" href="https://link.c1euro.com/qrcode" target="_self" aria-label="Télécharger l&#x27;application"><svg class="fi fi-download" width="24px" height="24px" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24"><use href="https://c1euro.com/media/plugins/featherIcons/feather-sprite.svg#download"/></svg> <span>Télécharger l&#x27;application</span></a></li></ul></nav><a class="logo logo--atbottom" href="https://c1euro.com/"><img src="https://c1euro.com/media/website/LOGO67-2.svg" alt="c1euro.com" width="46" height="46"></a></header></div></div><main class="main page"><article class="content"><figure class="content__featured-image content__featured-image--attop"><img src="https://c1euro.com/media/posts/9/33160b50bee39427e26fbdc2dde926b3b4ca44dc-384x239_ZbhptU.svg" loading="eager" height="239" width="384" alt="" aria-describedby="image-caption"></figure><div class="main__inner"><header class="content__header"><h1 class="content__title">Supprimer compte client</h1></header><div class="content__entry"><h2 class="text-2xl font-black sm:text-4xl text-balance align-center" data-sb-field-path=".heading">Supprimer votre compte</h2><div class="mx-auto mt-4 max-w-prose markdown" data-sb-field-path=".body"><p class="align-center">Cliquez ci-dessous pour supprimer votre compte utilisateur.</p></div><p class="align-center"><a href="https://c1euro-account.netlify.app/" style="display: inline-block; padding: 14px 28px; background-color: #000; color: #fff; text-decoration: none; border-radius: 9999px; font-size: 16px; font-weight: 600; text-align: center;"> Supprimer mon compte</a></p><p> </p></div></div></article></main><div class="right-bar"><div class="right-bar__inner"><div class="sidebar"><div class="box follow"><a href="https://www.facebook.com/profile.php?id&#x3D;61554010615115" class="tltp tltp--top" aria-label="Facebook"><svg><use xlink:href="https://c1euro.com/assets/svg/svg-map.svg#facebook"/></svg> <span>Facebook</span> </a><a href="https://www.instagram.com/appc1euro/" class="tltp tltp--top" aria-label="Instagram"><svg><use xlink:href="https://c1euro.com/assets/svg/svg-map.svg#instagram"/></svg> <span>Instagram</span> </a><a href="https://fr.pinterest.com/c1euroapp/" class="tltp tltp--top" aria-label="Pinterest"><svg><use xlink:href="https://c1euro.com/assets/svg/svg-map.svg#pinterest"/></svg> <span>Pinterest</span> </a><a href="https://youtu.be/OUandCkl-ug" class="tltp tltp--top" aria-label="Youtube"><svg><use xlink:href="https://c1euro.com/assets/svg/svg-map.svg#youtube"/></svg> <span>Youtube</span></a></div></div></div></div></div><script defer="defer" src="https://c1euro.com/assets/js/scripts.min.js?v=b2d91bcadbf5db401b76eb5bb3092eb7"></script><script>var images = document.querySelectorAll('img[loading]');
         for (var i = 0; i < images.length; i++) {
             if (images[i].complete) {
