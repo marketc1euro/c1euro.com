@@ -1,0 +1,32 @@
+<svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" width="200" height="200" viewBox="0 0 200 200">
+  <defs>
+    <clipPath id="clip-path">
+      <circle id="Ellipse_34" data-name="Ellipse 34" cx="100" cy="100" r="100" transform="translate(-10484 18407)" fill="#fff" stroke="#707070" stroke-width="1"/>
+    </clipPath>
+    <clipPath id="clip-path-2">
+      <path id="Tracé_268" data-name="Tracé 268" d="M100,0A100,100,0,1,1,0,100,100.036,100.036,0,0,1,100,0Z" clip-rule="evenodd"/>
+    </clipPath>
+  </defs>
+  <g id="Groupe_de_masques_19" data-name="Groupe de masques 19" transform="translate(10484 -18407)" clip-path="url(#clip-path)">
+    <g id="_5c9d95442b0d091bfb77d211e172c5d4" data-name="5c9d95442b0d091bfb77d211e172c5d4" transform="translate(-10484 18407)">
+      <path id="Tracé_263" data-name="Tracé 263" d="M100,0A100,100,0,1,1,0,100,100.036,100.036,0,0,1,100,0Z" fill="#c75c5c" fill-rule="evenodd"/>
+      <g id="Groupe_122" data-name="Groupe 122" clip-path="url(#clip-path-2)">
+        <path id="Tracé_264" data-name="Tracé 264" d="M139.467,60.333,391.867,312.8v1.333l-252.4-252.4Z" fill="#b35353" fill-rule="evenodd"/>
+        <path id="Tracé_265" data-name="Tracé 265" d="M139.467,61.733l252.4,252.4v95.2l-252.4-252.467Z" fill="#b35353" fill-rule="evenodd"/>
+        <path id="Tracé_266" data-name="Tracé 266" d="M139.467,156.867l252.4,252.467H312.933L60.533,156.867Z" fill="#b35353" fill-rule="evenodd"/>
+        <path id="Tracé_267" data-name="Tracé 267" d="M60.533,43.133h61.733l17.2,17.2v96.533H60.533Z" fill="#b35353" fill-rule="evenodd"/>
+      </g>
+      <path id="Tracé_269" data-name="Tracé 269" d="M100,0A100,100,0,1,1,0,100,100.036,100.036,0,0,1,100,0Z" fill="none" fill-rule="evenodd"/>
+      <path id="Tracé_270" data-name="Tracé 270" d="M60.533,43.133h61.733l17.2,17.2v96.533H60.533Z" fill="#d4f2f6" fill-rule="evenodd"/>
+      <path id="Tracé_271" data-name="Tracé 271" d="M120.867,43.133h1.4l17.2,17.2v1.4H122.2a1.353,1.353,0,0,1-1.333-1.4Z" fill="#bfdaf7" fill-rule="evenodd"/>
+      <path id="Tracé_272" data-name="Tracé 272" d="M115.8,111.667a1.454,1.454,0,0,0,1.4,1.4,1.4,1.4,0,0,0,1.333-1.4v-6.2a1.4,1.4,0,0,0-1.333-1.4,1.454,1.454,0,0,0-1.4,1.4Zm-24.8,0a1.367,1.367,0,1,0,2.733,0v-6.2a1.367,1.367,0,1,0-2.733,0Z" fill="#a1a1a1"/>
+      <path id="Tracé_273" data-name="Tracé 273" d="M79.467,145.667a1.367,1.367,0,1,0,0,2.733H127.8a1.367,1.367,0,1,0,0-2.733Zm0-7.333a1.367,1.367,0,1,0,0,2.733H127.8a1.367,1.367,0,1,0,0-2.733Zm0-7.333a1.367,1.367,0,1,0,0,2.733H127.8a1.367,1.367,0,1,0,0-2.733ZM84.2,69.133a1.367,1.367,0,1,0,0,2.733h32.733a1.353,1.353,0,0,0,1.333-1.4,1.337,1.337,0,0,0-1.333-1.333Zm0-8.8a1.367,1.367,0,1,0,0,2.733h32.733a1.337,1.337,0,0,0,1.333-1.333,1.353,1.353,0,0,0-1.333-1.4Zm0-8.733a1.367,1.367,0,1,0,0,2.733h32.733a1.353,1.353,0,0,0,1.333-1.4,1.337,1.337,0,0,0-1.333-1.333Z" fill="#bfdaf7"/>
+      <path id="Tracé_274" data-name="Tracé 274" d="M71.533,79.8h10.4l7.333,25.667h32.867l6.333-21.933H83" fill="none" fill-rule="evenodd"/>
+      <path id="Tracé_275" data-name="Tracé 275" d="M88,105.867l1.267-.4-1.267.4a1.2,1.2,0,0,0,1.333.933h32.8a1.307,1.307,0,0,0,1.333-1l6.267-21.933h0A1.362,1.362,0,0,0,128.8,82.2a.846.846,0,0,0-.4-.067H84l-.733-2.667a1.307,1.307,0,0,0-1.333-1h-10.4A1.337,1.337,0,0,0,70.2,79.8a1.353,1.353,0,0,0,1.333,1.4h9.4C83.133,88.933,85.533,97.4,88,105.867Zm2.333-1.8h30.8l5.533-19.2H86.733Z" fill="#b3b3b3"/>
+      <path id="Tracé_276" data-name="Tracé 276" d="M93.8,89.867a1.335,1.335,0,1,0,0,2.667h20.6a1.335,1.335,0,1,0,0-2.667Zm0,6.733a1.367,1.367,0,1,0,0,2.733h20.6a1.367,1.367,0,0,0,1.4-1.4,1.353,1.353,0,0,0-1.4-1.333Z" fill="#c2c2c2"/>
+      <path id="Tracé_277" data-name="Tracé 277" d="M72.933,79.8a1.353,1.353,0,0,0-1.4-1.333A1.337,1.337,0,0,0,70.2,79.8v8.333a1.337,1.337,0,0,0,1.333,1.333,1.353,1.353,0,0,0,1.4-1.333Z" fill="#b3b3b3"/>
+      <path id="Tracé_278" data-name="Tracé 278" d="M92.333,111.733a4.37,4.37,0,1,1-4.2,4.4A4.284,4.284,0,0,1,92.333,111.733Z" fill="#838383" fill-rule="evenodd"/>
+      <ellipse id="Ellipse_40" data-name="Ellipse 40" cx="4.267" cy="4.4" rx="4.267" ry="4.4" transform="translate(112.933 111.733)" fill="#838383"/>
+    </g>
+  </g>
+</svg>
