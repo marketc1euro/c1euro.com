@@ -9,7 +9,7 @@
     }
   }
   window.addEventListener('load', fixImages);
-  window.addEventListener('resize', fixImages);</script><meta name="p:domain_verify" content="777a1b0530f6993f2bcb1a96dff04b7a"><style>.fi{fill:none;stroke-linecap:round;stroke-linejoin:round;vertical-align:middle}</style></head><body class="error-template"><div id="launch-app-btn">Lancer l’application</div><div id="scroll-down-btn"><span class="arrow">&#x2193;</span></div><style>/* Bouton flèche vers le bas */
+  window.addEventListener('resize', fixImages);</script><meta name="p:domain_verify" content="777a1b0530f6993f2bcb1a96dff04b7a"><script defer="defer" src="https://cloud.umami.is/script.js" data-website-id="edb4f2a1-5cdf-4ef3-b837-efe910763b4b"></script><style>.fi{fill:none;stroke-linecap:round;stroke-linejoin:round;vertical-align:middle}</style></head><body class="error-template"><div id="launch-app-btn">Lancer l’application</div><div id="scroll-down-btn"><span class="arrow">&#x2193;</span></div><style>/* Bouton flèche vers le bas */
 #scroll-down-btn {
   position: fixed;
   bottom: 30px;
