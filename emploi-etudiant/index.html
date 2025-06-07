@@ -1,4 +1,4 @@
-<!DOCTYPE html><html lang="fr"><head><meta charset="utf-8"><meta http-equiv="X-UA-Compatible" content="IE=edge"><meta name="viewport" content="width=device-width,initial-scale=1"><title>Emploi étudiant | c1euro.com</title><meta name="robots" content="noindex, nofollow"><meta name="generator" content="Publii Open-Source CMS for Static Site"><link rel="alternate" type="application/atom+xml" href="https://c1euro.com/feed.xml" title="c1euro.com - RSS"><link rel="alternate" type="application/json" href="https://c1euro.com/feed.json" title="c1euro.com - JSON"><meta property="og:title" content="Emploi étudiant"><meta property="og:image" content="https://c1euro.com/media/website/HOME2.webp"><meta property="og:image:width" content="2200"><meta property="og:image:height" content="1485"><meta property="og:site_name" content="c1euro.com"><meta property="og:description" content="Votre message a bien été envoyé ! Étape suivante Étape suivante Type&hellip;"><meta property="og:url" content="https://c1euro.com/emploi-etudiant/"><meta property="og:type" content="article"><link rel="shortcut icon" href="https://c1euro.com/media/website/LOGO67-2-2.svg" type="image/x-icon"><link rel="stylesheet" href="https://c1euro.com/assets/css/style.css?v=c7460d5ddab769afdddbb56beceb6fb8"><script type="application/ld+json">{"@context":"http://schema.org","@type":"Article","mainEntityOfPage":{"@type":"WebPage","@id":"https://c1euro.com/emploi-etudiant/"},"headline":"Emploi étudiant","datePublished":"2025-06-07T15:58+02:00","dateModified":"2025-06-07T20:33+02:00","image":{"@type":"ImageObject","url":"https://c1euro.com/media/website/LOGO67-2-2-2.svg","height":46,"width":46},"description":"Votre message a bien été envoyé ! Étape suivante Étape suivante Type&hellip;","author":{"@type":"Person","name":"c1euro","url":"https://c1euro.com/authors/c1euro/"},"publisher":{"@type":"Organization","name":"c1euro","logo":{"@type":"ImageObject","url":"https://c1euro.com/media/website/LOGO67-2-2-2.svg","height":46,"width":46}}}</script><noscript><style>img[loading] {
+<!DOCTYPE html><html lang="fr"><head><meta charset="utf-8"><meta http-equiv="X-UA-Compatible" content="IE=edge"><meta name="viewport" content="width=device-width,initial-scale=1"><title>Emploi étudiant | c1euro.com</title><meta name="robots" content="noindex, nofollow"><meta name="generator" content="Publii Open-Source CMS for Static Site"><link rel="alternate" type="application/atom+xml" href="https://c1euro.com/feed.xml" title="c1euro.com - RSS"><link rel="alternate" type="application/json" href="https://c1euro.com/feed.json" title="c1euro.com - JSON"><meta property="og:title" content="Emploi étudiant"><meta property="og:image" content="https://c1euro.com/media/website/HOME2.webp"><meta property="og:image:width" content="2200"><meta property="og:image:height" content="1485"><meta property="og:site_name" content="c1euro.com"><meta property="og:description" content="Votre message a bien été envoyé ! Étape suivante Étape suivante Type&hellip;"><meta property="og:url" content="https://c1euro.com/emploi-etudiant/"><meta property="og:type" content="article"><link rel="shortcut icon" href="https://c1euro.com/media/website/LOGO67-2-2.svg" type="image/x-icon"><link rel="stylesheet" href="https://c1euro.com/assets/css/style.css?v=c7460d5ddab769afdddbb56beceb6fb8"><script type="application/ld+json">{"@context":"http://schema.org","@type":"Article","mainEntityOfPage":{"@type":"WebPage","@id":"https://c1euro.com/emploi-etudiant/"},"headline":"Emploi étudiant","datePublished":"2025-06-07T15:58+02:00","dateModified":"2025-06-07T20:39+02:00","image":{"@type":"ImageObject","url":"https://c1euro.com/media/website/LOGO67-2-2-2.svg","height":46,"width":46},"description":"Votre message a bien été envoyé ! Étape suivante Étape suivante Type&hellip;","author":{"@type":"Person","name":"c1euro","url":"https://c1euro.com/authors/c1euro/"},"publisher":{"@type":"Organization","name":"c1euro","logo":{"@type":"ImageObject","url":"https://c1euro.com/media/website/LOGO67-2-2-2.svg","height":46,"width":46}}}</script><noscript><style>img[loading] {
                     opacity: 1;
                 }</style></noscript><script>function fixImages() {
     if (window.innerWidth >= 1024) {
@@ -78,6 +78,7 @@
       headers: { 'Accept': 'application/json' }
     }).then(response => {
       if (response.ok) {
+        // Le formulaire a été envoyé avec succès
         form.reset();
         document.querySelectorAll('.form-step').forEach(div => div.style.display = 'none');
         document.getElementById('step-1').style.display = 'block';
@@ -88,10 +89,18 @@
           successBottom.style.display = 'none';
         }, 5000);
       } else {
-        alert('Une erreur est survenue, veuillez réessayer.');
+        // La réponse n'est pas OK, tentons d'obtenir plus de détails
+        response.text().then(errorMessage => {
+          // Si FormSubmit.co renvoie un message d'erreur dans le corps de la réponse
+          alert(`Erreur de soumission (Statut: ${response.status}). Veuillez réessayer. Détails: ${errorMessage}`);
+        }).catch(() => {
+          // Si le corps de la réponse n'est pas lisible (mais la réponse n'est pas OK)
+          alert(`Une erreur est survenue (Statut: ${response.status}). Veuillez réessayer.`);
+        });
       }
-    }).catch(() => {
-      alert('Une erreur est survenue, veuillez réessayer.');
+    }).catch(error => {
+      // Une erreur est survenue avant même d'obtenir une réponse du serveur (problème réseau)
+      alert('Une erreur réseau est survenue. Veuillez vérifier votre connexion et réessayer. Détails: ' + error.message);
     });
   });</script></p><figure class="post__image post__image--full"><img loading="lazy" src="https://c1euro.com/media/posts/18/wave-2.svg" alt="" width="1223" height="272"></figure></div></div></article></main><div class="right-bar"><div class="right-bar__inner"><div class="sidebar"><div class="box follow"><a href="https://www.facebook.com/profile.php?id&#x3D;61554010615115" class="tltp tltp--top" aria-label="Facebook"><svg><use xlink:href="https://c1euro.com/assets/svg/svg-map.svg#facebook"/></svg> <span>Facebook</span> </a><a href="https://www.instagram.com/appc1euro/" class="tltp tltp--top" aria-label="Instagram"><svg><use xlink:href="https://c1euro.com/assets/svg/svg-map.svg#instagram"/></svg> <span>Instagram</span> </a><a href="https://fr.pinterest.com/c1euroapp/" class="tltp tltp--top" aria-label="Pinterest"><svg><use xlink:href="https://c1euro.com/assets/svg/svg-map.svg#pinterest"/></svg> <span>Pinterest</span> </a><a href="https://www.youtube.com/@c1euro" class="tltp tltp--top" aria-label="Youtube"><svg><use xlink:href="https://c1euro.com/assets/svg/svg-map.svg#youtube"/></svg> <span>Youtube</span></a></div></div></div></div></div><script defer="defer" src="https://c1euro.com/assets/js/scripts.min.js?v=b2d91bcadbf5db401b76eb5bb3092eb7"></script><script>var images = document.querySelectorAll('img[loading]');
         for (var i = 0; i < images.length; i++) {
