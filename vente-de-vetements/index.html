@@ -13,10 +13,10 @@
   "@context": "https://schema.org",
   "@graph": [
     {
-      "@type": "Application mobile",
+      "@type": "MobileApplication",
       "name": "C1EURO",
       "operatingSystem": "iOS, Android",
-      "applicationCategory": "Shopping Application",
+      "applicationCategory": "ShoppingApplication",
       "url": "https://c1euro.com",
       "offers": {
         "@type": "Offer",
