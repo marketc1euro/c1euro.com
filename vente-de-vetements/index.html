@@ -13,10 +13,10 @@
   "@context": "https://schema.org",
   "@graph": [
     {
-      "@type": "MobileApplication",
+      "@type": "Application mobile",
       "name": "C1EURO",
       "operatingSystem": "iOS, Android",
-      "applicationCategory": "ShoppingApplication",
+      "applicationCategory": "Shopping Application",
       "url": "https://c1euro.com",
       "offers": {
         "@type": "Offer",
@@ -53,7 +53,7 @@
     },
     {
       "@type": "Product",
-      "name": "Services et articles à prix mini via l'application C1EURO",
+      "name": "Services et Shopping à prix mini via l'application C1EURO",
       "image": "https://c1euro.com/media/posts/1/HOME6.webp",
       "description": "Une sélection de services et produits shopping proposés directement dans notre application mobile.",
       "brand": {
@@ -64,7 +64,7 @@
         "@type": "Review",
         "author": {
           "@type": "Person",
-          "name": "Utilisateur C1EURO"
+          "name": "C1EURO"
         },
         "reviewRating": {
           "@type": "Rating",
