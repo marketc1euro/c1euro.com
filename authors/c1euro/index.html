@@ -83,7 +83,7 @@
           "ratingValue": "5",
           "bestRating": "5"
         },
-        "reviewBody": "Super application pour trouver des services rapidement et pas cher !"
+        "reviewBody": "Top! C1Euro rend le shopping en ligne fun et abordable. Super concept et produits de qualité pour seulement 1 euro. Recommandé!"
       },
       "aggregateRating": {
         "@type": "AggregateRating",
