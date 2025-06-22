@@ -18,6 +18,18 @@
       "operatingSystem": "iOS, Android",
       "applicationCategory": "ShoppingApplication",
       "url": "https://c1euro.com",
+      "downloadUrl": [
+        "https://apps.apple.com/fr/app/c1euro/id6470069252",
+        "https://play.google.com/store/apps/details?id=com.c1euro.user&hl=fr&pli=1"
+      ],
+      "installUrl": [
+        "https://apps.apple.com/fr/app/c1euro/id6470069252",
+        "https://play.google.com/store/apps/details?id=com.c1euro.user&hl=fr&pli=1"
+      ],
+      "sameAs": [
+        "https://apps.apple.com/fr/app/c1euro/id6470069252",
+        "https://play.google.com/store/apps/details?id=com.c1euro.user&hl=fr&pli=1"
+      ],
       "offers": {
         "@type": "Offer",
         "price": "1.00",
