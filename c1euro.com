@@ -9,7 +9,82 @@
     }
   }
   window.addEventListener('load', fixImages);
-  window.addEventListener('resize', fixImages);</script><meta name="p:domain_verify" content="777a1b0530f6993f2bcb1a96dff04b7a"><script defer="defer" src="https://cloud.umami.is/script.js" data-website-id="edb4f2a1-5cdf-4ef3-b837-efe910763b4b"></script><style>.fi{fill:none;stroke-linecap:round;stroke-linejoin:round;vertical-align:middle}</style></head><body class="error-template"><script defer="defer" src="https://static.cloudflareinsights.com/beacon.min.js" data-cf-beacon='{"token": "fa51fcb66a4a439b8df347aefc247af7"}'></script><div class="container"><div class="left-bar"><div class="left-bar__inner"><header class="header"><a class="logo" href="https://c1euro.com/"><img src="https://c1euro.com/media/website/LOGO67-2-2-2.svg" alt="c1euro.com" width="46" height="46"></a><nav class="navbar"><button class="navbar__toggle" aria-label="Menu" aria-haspopup="true" aria-expanded="false"><span class="navbar__toggle__box"><span class="navbar__toggle__inner">Menu</span></span></button><ul class="navbar__menu"><li><a class="tltp" href="https://c1euro.com/" target="_self" aria-label="Accueil"><svg class="fi fi-home" width="24px" height="24px" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24"><use href="https://c1euro.com/media/plugins/featherIcons/feather-sprite.svg#home"/></svg> <span>Accueil</span></a></li><li><a class="tltp" href="https://c1euro.com/nos-categories/" target="_self" aria-label="Nos catégories"><svg class="fi fi-tablet" width="24px" height="24px" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24"><use href="https://c1euro.com/media/plugins/featherIcons/feather-sprite.svg#tablet"/></svg> <span>Nos catégories</span></a></li><li><a class="tltp" href="https://c1euro.com/vendre-sur-application-c1euro/" target="_self" aria-label="Devenez vendeur"><svg class="fi fi-briefcase" width="24px" height="24px" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24"><use href="https://c1euro.com/media/plugins/featherIcons/feather-sprite.svg#briefcase"/></svg> <span>Devenez vendeur</span></a></li><li><a class="tltp" href="https://c1euro.com/contactez-nous/" target="_self" aria-label="Contactez-nous"><svg class="fi fi-mail" width="24px" height="24px" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24"><use href="https://c1euro.com/media/plugins/featherIcons/feather-sprite.svg#mail"/></svg> <span>Contactez-nous</span></a></li><li><a class="tltp" href="https://link.c1euro.com/qrcode" target="_self" aria-label="Télécharger l&#x27;application"><svg class="fi fi-download" width="24px" height="24px" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24"><use href="https://c1euro.com/media/plugins/featherIcons/feather-sprite.svg#download"/></svg> <span>Télécharger l&#x27;application</span></a></li></ul></nav><a class="logo logo--atbottom" href="https://c1euro.com/"><img src="https://c1euro.com/media/website/LOGO67-2-2-2.svg" alt="c1euro.com" width="46" height="46"></a></header></div></div><main class="main page page--error"><div class="hero"><div class="main__inner"><h1>Explore, be curious.</h1><p>Discover stories, thinking, and expertise from writers on any topic.</p></div></div><div class="main__inner"><h1>404 Error</h1><p>The page you were looking for appears to have been moved, deleted or does not exist. You could go back to where you were or head straight to our home page.</p><p><a href="https://c1euro.com/" class="btn">Go Home</a></p></div></main><div class="right-bar"><div class="right-bar__inner"><div class="sidebar"><div class="box follow"><a href="https://www.facebook.com/profile.php?id&#x3D;61554010615115" class="tltp tltp--top" aria-label="Facebook"><svg><use xlink:href="https://c1euro.com/assets/svg/svg-map.svg#facebook"/></svg> <span>Facebook</span> </a><a href="https://www.instagram.com/appc1euro/" class="tltp tltp--top" aria-label="Instagram"><svg><use xlink:href="https://c1euro.com/assets/svg/svg-map.svg#instagram"/></svg> <span>Instagram</span> </a><a href="https://fr.pinterest.com/c1euroapp/" class="tltp tltp--top" aria-label="Pinterest"><svg><use xlink:href="https://c1euro.com/assets/svg/svg-map.svg#pinterest"/></svg> <span>Pinterest</span> </a><a href="https://www.youtube.com/@c1euro" class="tltp tltp--top" aria-label="Youtube"><svg><use xlink:href="https://c1euro.com/assets/svg/svg-map.svg#youtube"/></svg> <span>Youtube</span></a></div></div></div></div></div><script defer="defer" src="https://c1euro.com/assets/js/scripts.min.js?v=b2d91bcadbf5db401b76eb5bb3092eb7"></script><script>var images = document.querySelectorAll('img[loading]');
+  window.addEventListener('resize', fixImages);</script><meta name="p:domain_verify" content="777a1b0530f6993f2bcb1a96dff04b7a"><script defer="defer" src="https://cloud.umami.is/script.js" data-website-id="edb4f2a1-5cdf-4ef3-b837-efe910763b4b"></script><script type="application/ld+json">{
+  "@context": "https://schema.org",
+  "@graph": [
+    {
+      "@type": "MobileApplication",
+      "name": "C1EURO",
+      "operatingSystem": "iOS, Android",
+      "applicationCategory": "ShoppingApplication",
+      "url": "https://c1euro.com",
+      "offers": {
+        "@type": "Offer",
+        "price": "1.00",
+        "priceCurrency": "EUR"
+      },
+      "publisher": {
+        "@type": "Organization",
+        "name": "C1EURO"
+      },
+      "aggregateRating": {
+        "@type": "AggregateRating",
+        "ratingValue": "4.7",
+        "reviewCount": "250"
+      }
+    },
+    {
+      "@type": "Service",
+      "name": "Connexion à des professionnels pour 1€",
+      "description": "Un service rapide pour être mis en relation avec des professionnels via l'application mobile C1EURO.",
+      "provider": {
+        "@type": "Organization",
+        "name": "C1EURO"
+      },
+      "offers": {
+        "@type": "Offer",
+        "price": "1.00",
+        "priceCurrency": "EUR"
+      },
+      "areaServed": {
+        "@type": "Country",
+        "name": "France"
+      }
+    },
+    {
+      "@type": "Product",
+      "name": "Services et articles à prix mini via l'application C1EURO",
+      "image": "https://c1euro.com/media/posts/1/HOME6.webp",
+      "description": "Une sélection de services et produits shopping proposés directement dans notre application mobile.",
+      "brand": {
+        "@type": "Brand",
+        "name": "C1EURO"
+      },
+      "offers": {
+        "@type": "AggregateOffer",
+        "lowPrice": "1.00",
+        "highPrice": "10.00",
+        "priceCurrency": "EUR"
+      }
+    },
+    {
+      "@type": "Organization",
+      "name": "C1EURO",
+      "url": "https://c1euro.com",
+      "logo": {
+        "@type": "ImageObject",
+        "url": "https://c1euro.com/media/website/LOGO67-2-2-2.svg",
+        "width": 46,
+        "height": 46
+      },
+      "sameAs": [
+        "https://www.facebook.com/profile.php?id=61554010615115",
+        "https://www.instagram.com/appc1euro/",
+        "https://www.linkedin.com/in/mustapha-doudi-53846430a/"
+      ]
+    }
+  ]
+}</script><style>.fi{fill:none;stroke-linecap:round;stroke-linejoin:round;vertical-align:middle}</style></head><body class="error-template"><script defer="defer" src="https://static.cloudflareinsights.com/beacon.min.js" data-cf-beacon='{"token": "fa51fcb66a4a439b8df347aefc247af7"}'></script><div class="container"><div class="left-bar"><div class="left-bar__inner"><header class="header"><a class="logo" href="https://c1euro.com/"><img src="https://c1euro.com/media/website/LOGO67-2-2-2.svg" alt="c1euro.com" width="46" height="46"></a><nav class="navbar"><button class="navbar__toggle" aria-label="Menu" aria-haspopup="true" aria-expanded="false"><span class="navbar__toggle__box"><span class="navbar__toggle__inner">Menu</span></span></button><ul class="navbar__menu"><li><a class="tltp" href="https://c1euro.com/" target="_self" aria-label="Accueil"><svg class="fi fi-home" width="24px" height="24px" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24"><use href="https://c1euro.com/media/plugins/featherIcons/feather-sprite.svg#home"/></svg> <span>Accueil</span></a></li><li><a class="tltp" href="https://c1euro.com/nos-categories/" target="_self" aria-label="Nos catégories"><svg class="fi fi-tablet" width="24px" height="24px" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24"><use href="https://c1euro.com/media/plugins/featherIcons/feather-sprite.svg#tablet"/></svg> <span>Nos catégories</span></a></li><li><a class="tltp" href="https://c1euro.com/vendre-sur-application-c1euro/" target="_self" aria-label="Devenez vendeur"><svg class="fi fi-briefcase" width="24px" height="24px" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24"><use href="https://c1euro.com/media/plugins/featherIcons/feather-sprite.svg#briefcase"/></svg> <span>Devenez vendeur</span></a></li><li><a class="tltp" href="https://c1euro.com/contactez-nous/" target="_self" aria-label="Contactez-nous"><svg class="fi fi-mail" width="24px" height="24px" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24"><use href="https://c1euro.com/media/plugins/featherIcons/feather-sprite.svg#mail"/></svg> <span>Contactez-nous</span></a></li><li><a class="tltp" href="https://link.c1euro.com/qrcode" target="_self" aria-label="Télécharger l&#x27;application"><svg class="fi fi-download" width="24px" height="24px" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24"><use href="https://c1euro.com/media/plugins/featherIcons/feather-sprite.svg#download"/></svg> <span>Télécharger l&#x27;application</span></a></li></ul></nav><a class="logo logo--atbottom" href="https://c1euro.com/"><img src="https://c1euro.com/media/website/LOGO67-2-2-2.svg" alt="c1euro.com" width="46" height="46"></a></header></div></div><main class="main page page--error"><div class="hero"><div class="main__inner"><h1>Explore, be curious.</h1><p>Discover stories, thinking, and expertise from writers on any topic.</p></div></div><div class="main__inner"><h1>404 Error</h1><p>The page you were looking for appears to have been moved, deleted or does not exist. You could go back to where you were or head straight to our home page.</p><p><a href="https://c1euro.com/" class="btn">Go Home</a></p></div></main><div class="right-bar"><div class="right-bar__inner"><div class="sidebar"><div class="box follow"><a href="https://www.facebook.com/profile.php?id&#x3D;61554010615115" class="tltp tltp--top" aria-label="Facebook"><svg><use xlink:href="https://c1euro.com/assets/svg/svg-map.svg#facebook"/></svg> <span>Facebook</span> </a><a href="https://www.instagram.com/appc1euro/" class="tltp tltp--top" aria-label="Instagram"><svg><use xlink:href="https://c1euro.com/assets/svg/svg-map.svg#instagram"/></svg> <span>Instagram</span> </a><a href="https://fr.pinterest.com/c1euroapp/" class="tltp tltp--top" aria-label="Pinterest"><svg><use xlink:href="https://c1euro.com/assets/svg/svg-map.svg#pinterest"/></svg> <span>Pinterest</span> </a><a href="https://www.youtube.com/@c1euro" class="tltp tltp--top" aria-label="Youtube"><svg><use xlink:href="https://c1euro.com/assets/svg/svg-map.svg#youtube"/></svg> <span>Youtube</span></a></div></div></div></div></div><script defer="defer" src="https://c1euro.com/assets/js/scripts.min.js?v=b2d91bcadbf5db401b76eb5bb3092eb7"></script><script>var images = document.querySelectorAll('img[loading]');
         for (var i = 0; i < images.length; i++) {
             if (images[i].complete) {
                 images[i].classList.add('is-loaded');
