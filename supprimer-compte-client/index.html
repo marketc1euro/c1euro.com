@@ -17,6 +17,7 @@
       "@id": "https://c1euro.com#app",
       "name": "C1EURO",
       "description": "Application mobile pour accéder à des services professionnels et des produits à prix réduit, à partir de 1€.",
+      "applicationId": "com.c1euro.user",
       "operatingSystem": "iOS, Android",
       "applicationCategory": "ShoppingApplication",
       "url": "https://c1euro.com",
@@ -73,7 +74,7 @@
       "review": {
         "@type": "Review",
         "author": {
-          "@type": "Person",
+          "@type": "Organization",
           "name": "C1EURO"
         },
         "reviewRating": {
