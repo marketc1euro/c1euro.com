@@ -14,15 +14,13 @@
   "@graph": [
     {
       "@type": "MobileApplication",
+      "@id": "https://c1euro.com#app",
       "name": "C1EURO",
+      "description": "Application mobile pour accéder à des services professionnels et des produits à prix réduit, à partir de 1€.",
       "operatingSystem": "iOS, Android",
       "applicationCategory": "ShoppingApplication",
       "url": "https://c1euro.com",
       "downloadUrl": [
-        "https://apps.apple.com/fr/app/c1euro/id6470069252",
-        "https://play.google.com/store/apps/details?id=com.c1euro.user&hl=fr&pli=1"
-      ],
-      "installUrl": [
         "https://apps.apple.com/fr/app/c1euro/id6470069252",
         "https://play.google.com/store/apps/details?id=com.c1euro.user&hl=fr&pli=1"
       ],
@@ -32,12 +30,12 @@
       ],
       "offers": {
         "@type": "Offer",
-        "price": "1.00",
+        "price": "0.00",
         "priceCurrency": "EUR"
       },
       "publisher": {
         "@type": "Organization",
-        "name": "C1EURO"
+        "@id": "https://c1euro.com#organization"
       },
       "aggregateRating": {
         "@type": "AggregateRating",
@@ -51,7 +49,7 @@
       "description": "Un service rapide pour être mis en relation avec des professionnels via l'application mobile C1EURO.",
       "provider": {
         "@type": "Organization",
-        "name": "C1EURO"
+        "@id": "https://c1euro.com#organization"
       },
       "offers": {
         "@type": "Offer",
@@ -100,19 +98,30 @@
     },
     {
       "@type": "Organization",
+      "@id": "https://c1euro.com#organization",
       "name": "C1EURO",
       "url": "https://c1euro.com",
       "logo": {
         "@type": "ImageObject",
         "url": "https://c1euro.com/media/website/LOGO67-2-2-2.svg",
-        "width": 46,
-        "height": 46
+        "width": 112,
+        "height": 112
       },
       "sameAs": [
         "https://www.facebook.com/profile.php?id=61554010615115",
         "https://www.instagram.com/appc1euro/",
         "https://www.linkedin.com/in/mustapha-doudi-53846430a/"
       ]
+    },
+    {
+      "@type": "WebSite",
+      "url": "https://c1euro.com",
+      "name": "C1EURO",
+      "potentialAction": {
+        "@type": "SearchAction",
+        "target": "https://c1euro.com/search?q={search_term_string}",
+        "query-input": "required name=search_term_string"
+      }
     }
   ]
 }</script><link rel="stylesheet" href="https://c1euro.com/media/plugins/coreLightboxGallery/photoswipe.min.css"><style>:root {
