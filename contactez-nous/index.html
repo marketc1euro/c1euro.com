@@ -9,7 +9,7 @@
     }
   }
   window.addEventListener('load', fixImages);
-  window.addEventListener('resize', fixImages);</script><meta name="p:domain_verify" content="777a1b0530f6993f2bcb1a96dff04b7a"><script defer="defer" src="https://cloud.umami.is/script.js" data-website-id="edb4f2a1-5cdf-4ef3-b837-efe910763b4b"></script><script type="application/ld+json">{
+  window.addEventListener('resize', fixImages);</script><meta name="p:domain_verify" content="777a1b0530f6993f2bcb1a96dff04b7a"><script defer="defer" src="https://cloud.umami.is/script.js" data-website-id="edb4f2a1-5cdf-4ef3-b837-efe910763b4b"></script><link rel="apple-touch-icon" sizes="180x180" href="https://c1euro.com/media/posts/11/responsive/Groupe-3273-copie-xl.png"><script type="application/ld+json">{
   "@context": "https://schema.org",
   "@graph": [
     {
