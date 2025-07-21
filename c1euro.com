@@ -18,11 +18,8 @@
     });</script><meta name="google-site-verification" content="_cEmbC4NdSYbjafWQJYrv0ZMSH3ZOiprC2fzGOVV2dU"><script>function fixImages() {
     if (window.innerWidth >= 1024) {
       document.querySelectorAll('.content__featured-image--attop img.is-loaded').forEach(img => {
-        if (img.hasAttribute('srcset')) {
-          const src = img.currentSrc || img.src;
-          img.removeAttribute('srcset');
-          img.src = src; // Recharge l'image haute qualité manuellement
-        }
+        img.removeAttribute('srcset'); // Supprime le srcset pour éviter le flou progressif
+        img.style.imageRendering = ''; // Réinitialise toute manipulation CSS de rendu
       });
     }
   }
