@@ -18,12 +18,15 @@
     });</script><meta name="google-site-verification" content="_cEmbC4NdSYbjafWQJYrv0ZMSH3ZOiprC2fzGOVV2dU"><script>function fixImages() {
     if (window.innerWidth >= 1024) {
       document.querySelectorAll('.content__featured-image--attop img.is-loaded').forEach(img => {
-        img.removeAttribute('srcset'); // Supprime le srcset pour éviter le flou progressif
-        img.style.imageRendering = ''; // Réinitialise toute manipulation CSS de rendu
+        if (img.hasAttribute('srcset')) {
+          const src = img.currentSrc || img.src;
+          img.removeAttribute('srcset');
+          img.src = src;
+        }
       });
     }
   }
-  window.addEventListener('load', fixImages);
+  document.addEventListener('DOMContentLoaded', fixImages);
   window.addEventListener('resize', fixImages);</script><meta name="p:domain_verify" content="777a1b0530f6993f2bcb1a96dff04b7a"><script defer="defer" src="https://cloud.umami.is/script.js" data-website-id="edb4f2a1-5cdf-4ef3-b837-efe910763b4b"></script><link rel="apple-touch-icon" sizes="180x180" href="https://c1euro.com/media/posts/11/responsive/Groupe-3273-copie-xl.png"><script type="application/ld+json">{
   "@context": "https://schema.org",
   "@graph": [
