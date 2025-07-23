@@ -173,8 +173,8 @@
   right: 18px;            /* ✅ Position horizontale par défaut (PC) */
   transform: translateY(-50%);
 
-  width: 52px;
-  height: 52px;
+  width: 46px;
+  height: 46px;
   border-radius: 50%;
 
   display: flex;
@@ -196,8 +196,8 @@
 }
 
 #whatsapp-button img {
-  width: 22px;
-  height: 22px;
+  width: 18px;
+  height: 18px;
 }
 
 /* ✅ SUR MOBILE : on ajuste indépendamment */
