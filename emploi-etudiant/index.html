@@ -173,8 +173,8 @@
   right: 18px;            /* ✅ Position horizontale par défaut (PC) */
   transform: translateY(-50%);
 
-  width: 48px;
-  height: 48px;
+  width: 50px;
+  height: 50px;
   border-radius: 50%;
 
   display: flex;
