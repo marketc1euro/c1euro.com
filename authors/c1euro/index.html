@@ -17,7 +17,7 @@
     Weglot.initialize({
       api_key: 'wg_1542a19fb322ca33631fc5c9c0f713521'
     });
-  });</script><meta name="google-site-verification" content="_cEmbC4NdSYbjafWQJYrv0ZMSH3ZOiprC2fzGOVV2dU"><script>function fixImages() {
+  });</script><link rel="preload" href="css/style.css?v=0ce846f" as="style" onload="this.onload=null;this.rel='stylesheet'"><noscript><link rel="stylesheet" href="css/style.css?v=0ce846f"></noscript><link rel="preload" href="css/photoswipe.min.css" as="style" onload="this.onload=null;this.rel='stylesheet'"><noscript><link rel="stylesheet" href="css/photoswipe.min.css"></noscript><meta name="google-site-verification" content="_cEmbC4NdSYbjafWQJYrv0ZMSH3ZOiprC2fzGOVV2dU"><script>function fixImages() {
     if (window.innerWidth >= 1024) {
       document.querySelectorAll('.content__featured-image--attop img.is-loaded').forEach(img => {
         img.removeAttribute('srcset'); // Supprime le srcset pour éviter le flou progressif
