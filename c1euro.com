@@ -170,7 +170,7 @@
 }</script><meta name="msvalidate.01" content="3C67B8901AAE119A9E3B1EAA0D370752"><style>.fi{fill:none;stroke-linecap:round;stroke-linejoin:round;vertical-align:middle}</style></head><body class="error-template"><script defer="defer" src="https://static.cloudflareinsights.com/beacon.min.js" data-cf-beacon='{"token": "fa51fcb66a4a439b8df347aefc247af7"}'></script><a href="https://wa.me/33781438057" target="_blank" id="whatsapp-button"><img src="https://c1euro.com/media/posts/26/WA.svg" alt="WhatsApp"></a><style>#whatsapp-button {
   position: fixed;
   top: 60%;               /* ✅ Position verticale par défaut (PC) */
-  right: 18px;            /* ✅ Position horizontale par défaut (PC) */
+  right: 22px;            /* ✅ Position horizontale par défaut (PC) */
   transform: translateY(-50%);
 
   width: 42px;
