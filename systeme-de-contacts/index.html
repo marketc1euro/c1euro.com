@@ -13,7 +13,7 @@
     link.setAttribute('href', item.url);
     document.head.appendChild(link);
   });
-})();</script><link rel="stylesheet" href="css/style.css?v=0ce846f" media="print" onload="this.media='all'"><link rel="stylesheet" href="css/photoswipe.min.css" media="print" onload="this.media='all'"><noscript><link rel="stylesheet" href="css/style.css?v=0ce846f"><link rel="stylesheet" href="css/photoswipe.min.css"></noscript><script src="https://cdn.weglot.com/weglot.min.js" defer="defer"></script><script defer="defer">Weglot.initialize({
+})();</script><script src="https://cdn.weglot.com/weglot.min.js"></script><script>Weglot.initialize({
     api_key: 'wg_1542a19fb322ca33631fc5c9c0f713521'
   });</script><meta name="google-site-verification" content="_cEmbC4NdSYbjafWQJYrv0ZMSH3ZOiprC2fzGOVV2dU"><script>function fixImages() {
     if (window.innerWidth >= 1024) {
