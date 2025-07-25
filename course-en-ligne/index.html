@@ -13,7 +13,18 @@
     link.setAttribute('href', item.url);
     document.head.appendChild(link);
   });
-})();</script><meta name="google-site-verification" content="_cEmbC4NdSYbjafWQJYrv0ZMSH3ZOiprC2fzGOVV2dU"><script>function fixImages() {
+})();</script><script>window.addEventListener('load', function() {
+    // ✅ Création dynamique du script Weglot
+    const script = document.createElement('script');
+    script.src = "https://cdn.weglot.com/weglot.min.js";
+    script.onload = function() {
+      // ✅ Initialisation Weglot une fois le script chargé
+      Weglot.initialize({
+        api_key: 'wg_1542a19fb322ca33631fc5c9c0f713521'
+      });
+    };
+    document.body.appendChild(script);
+  });</script><meta name="google-site-verification" content="_cEmbC4NdSYbjafWQJYrv0ZMSH3ZOiprC2fzGOVV2dU"><script>function fixImages() {
     if (window.innerWidth >= 1024) {
       document.querySelectorAll('.content__featured-image--attop img.is-loaded').forEach(img => {
         img.removeAttribute('srcset'); // Supprime le srcset pour éviter le flou progressif
