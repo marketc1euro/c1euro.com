@@ -218,18 +218,16 @@
     right: 82px;     /* ✅ Position horizontale mobile (comme PC mais ajustable) */
   }
 }</style><script>document.addEventListener("DOMContentLoaded", function() {
-  // Toutes les images sauf la première visible deviennent lazy
-  const images = document.querySelectorAll("img");
-  let firstLCP = true;
+  // Exclure le logo (ajuste selon ta classe)
+  const images = document.querySelectorAll("img:not(.logo):not(.site-logo):not(header img)");
 
+  let firstLCP = true;
   images.forEach(img => {
     if (firstLCP) {
-      // Première image = LCP => priorité haute
       img.setAttribute("fetchpriority", "high");
       img.setAttribute("decoding", "sync");
       firstLCP = false;
     } else {
-      // Les autres deviennent lazy
       img.setAttribute("loading", "lazy");
       img.setAttribute("decoding", "async");
     }
