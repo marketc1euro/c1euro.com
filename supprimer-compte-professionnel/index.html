@@ -15,13 +15,24 @@
   });
 })();</script><script>window.addEventListener('load', function() {
 
-  // ✅ Si on est sur le sous-domaine anglais, on ne charge PAS Weglot
+  // ✅ Si on est sur le SOUS-DOMAINE anglais
   if (window.location.hostname === "en.c1euro.com") {
-    console.log("✅ Pas de Weglot sur en.c1euro.com");
+    console.log("✅ Chargement immédiat sur en.c1euro.com");
+    
+    // On charge Weglot directement (pas de délai)
+    const script = document.createElement('script');
+    script.src = "https://cdn.weglot.com/weglot.min.js";
+    script.onload = function() {
+      Weglot.initialize({
+        api_key: 'wg_1542a19fb322ca33631fc5c9c0f713521'
+      });
+    };
+    document.body.appendChild(script);
     return;
   }
 
-  // ✅ Sinon (sur c1euro.com), on attend 5s avant de charger Weglot
+  // ✅ Sinon (domaine principal), on attend 5 s AVANT de charger Weglot
+  console.log("✅ Chargement Weglot 5 s après sur le domaine principal");
   setTimeout(() => {
     const script = document.createElement('script');
     script.src = "https://cdn.weglot.com/weglot.min.js";
