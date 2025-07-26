@@ -196,35 +196,7 @@
       }
     }
   ]
-}</script><meta name="msvalidate.01" content="3C67B8901AAE119A9E3B1EAA0D370752"><script>document.addEventListener("DOMContentLoaded", function() {
-  // ✅ On détecte la première image qui est dans le viewport
-  const images = document.querySelectorAll("img");
-  let firstVisibleImage = null;
-
-  for (let img of images) {
-    const rect = img.getBoundingClientRect();
-    if (rect.top >= 0 && rect.bottom <= window.innerHeight) {
-      firstVisibleImage = img;
-      break;
-    }
-  }
-
-  if (firstVisibleImage) {
-    const src = firstVisibleImage.currentSrc || firstVisibleImage.src;
-    console.log("✅ Image LCP détectée :", src);
-
-    // ✅ 1) On ajoute un preload dans le <head>
-    const preload = document.createElement("link");
-    preload.rel = "preload";
-    preload.as = "image";
-    preload.href = src;
-    document.head.appendChild(preload);
-
-    // ✅ 2) On force la priorité de chargement
-    firstVisibleImage.setAttribute("fetchpriority", "high");
-    firstVisibleImage.removeAttribute("loading"); // désactive lazy-loading
-  }
-});</script><style>.fi{fill:none;stroke-linecap:round;stroke-linejoin:round;vertical-align:middle}</style></head><body class="error-template"><script defer="defer" src="https://static.cloudflareinsights.com/beacon.min.js" data-cf-beacon='{"token": "fa51fcb66a4a439b8df347aefc247af7"}'></script><a href="https://wa.me/33781438057?text=Bonjour%2C%20j%27ai%20une%20question%20au%20sujet%20de%20votre%20application%20C1EURO" target="_blank" id="whatsapp-button" style="opacity: 0; pointer-events: none; transition: opacity 0.5s ease;"><img src="https://c1euro.com/media/posts/26/WA.svg" alt="WhatsApp"></a><style>#whatsapp-button {
+}</script><meta name="msvalidate.01" content="3C67B8901AAE119A9E3B1EAA0D370752"><style>.fi{fill:none;stroke-linecap:round;stroke-linejoin:round;vertical-align:middle}</style></head><body class="error-template"><script defer="defer" src="https://static.cloudflareinsights.com/beacon.min.js" data-cf-beacon='{"token": "fa51fcb66a4a439b8df347aefc247af7"}'></script><a href="https://wa.me/33781438057?text=Bonjour%2C%20j%27ai%20une%20question%20au%20sujet%20de%20votre%20application%20C1EURO" target="_blank" id="whatsapp-button" style="opacity: 0; pointer-events: none; transition: opacity 0.5s ease;"><img src="https://c1euro.com/media/posts/26/WA.svg" alt="WhatsApp"></a><style>#whatsapp-button {
   position: fixed;
   top: 60%;               /* ✅ Position verticale par défaut (PC) */
   right: 22px;            /* ✅ Position horizontale par défaut (PC) */

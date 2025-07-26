@@ -198,35 +198,7 @@ C1EURO réunit les meilleures marques high-tech du marché. "><meta property=
       }
     }
   ]
-}</script><meta name="msvalidate.01" content="3C67B8901AAE119A9E3B1EAA0D370752"><script>document.addEventListener("DOMContentLoaded", function() {
-  // ✅ On détecte la première image qui est dans le viewport
-  const images = document.querySelectorAll("img");
-  let firstVisibleImage = null;
-
-  for (let img of images) {
-    const rect = img.getBoundingClientRect();
-    if (rect.top >= 0 && rect.bottom <= window.innerHeight) {
-      firstVisibleImage = img;
-      break;
-    }
-  }
-
-  if (firstVisibleImage) {
-    const src = firstVisibleImage.currentSrc || firstVisibleImage.src;
-    console.log("✅ Image LCP détectée :", src);
-
-    // ✅ 1) On ajoute un preload dans le <head>
-    const preload = document.createElement("link");
-    preload.rel = "preload";
-    preload.as = "image";
-    preload.href = src;
-    document.head.appendChild(preload);
-
-    // ✅ 2) On force la priorité de chargement
-    firstVisibleImage.setAttribute("fetchpriority", "high");
-    firstVisibleImage.removeAttribute("loading"); // désactive lazy-loading
-  }
-});</script><link rel="stylesheet" href="https://c1euro.com/media/plugins/coreLightboxGallery/photoswipe.min.css"><style>:root {
+}</script><meta name="msvalidate.01" content="3C67B8901AAE119A9E3B1EAA0D370752"><link rel="stylesheet" href="https://c1euro.com/media/plugins/coreLightboxGallery/photoswipe.min.css"><style>:root {
 		       	 --pswp-bg: #000000;
 					 --pswp-placeholder-bg: rgba(38, 40, 44, 1);
 					 --pswp-ui-bg: rgba(38, 40, 44, .5);
