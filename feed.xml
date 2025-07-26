@@ -3,7 +3,7 @@
     <title>c1euro.com</title>
     <link href="https://c1euro.com/feed.xml" rel="self" />
     <link href="https://c1euro.com" />
-    <updated>2025-07-26T00:05:21+02:00</updated>
+    <updated>2025-07-26T22:51:02+02:00</updated>
     <author>
         <name>c1euro</name>
     </author>
@@ -16,6 +16,7 @@
         </author>
         <link href="https://c1euro.com/trajets-reguliers-c1euro/"/>
         <id>https://c1euro.com/trajets-reguliers-c1euro/</id>
+            <category term="Mode et tendance"/>
             <category term="Astuces"/>
 
         <updated>2025-07-26T00:01:51+02:00</updated>
