@@ -3,7 +3,7 @@
     <title>c1euro.com</title>
     <link href="https://c1euro.com/feed.xml" rel="self" />
     <link href="https://c1euro.com" />
-    <updated>2025-07-27T14:28:45+02:00</updated>
+    <updated>2025-07-27T14:32:21+02:00</updated>
     <author>
         <name>c1euro</name>
     </author>
@@ -16,6 +16,7 @@
         </author>
         <link href="https://c1euro.com/destockage-magasin-pas-cher-c1euro/"/>
         <id>https://c1euro.com/destockage-magasin-pas-cher-c1euro/</id>
+            <category term="Option"/>
             <category term="Mode et tendance"/>
 
         <updated>2025-07-27T03:18:09+02:00</updated>
