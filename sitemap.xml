@@ -5,13 +5,13 @@
 <loc>https://c1euro.com/</loc>
 </url>
 <url>
+<loc>https://c1euro.com/accueil/ville/</loc>
+</url>
+<url>
+<loc>https://c1euro.com/blog/</loc>
+</url>
+<url>
 <loc>https://c1euro.com/blog/astuces-c1euro/</loc>
-</url>
-<url>
-<loc>https://c1euro.com/blog/conseils-livraisons-ete/</loc>
-</url>
-<url>
-<loc>https://c1euro.com/blog/destockage-magasin-pas-cher-c1euro/</loc>
 </url>
 <url>
 <loc>https://c1euro.com/blog/livraison/</loc>
@@ -23,13 +23,12 @@
 <loc>https://c1euro.com/blog/option-application-c1euro/</loc>
 </url>
 <url>
-<loc>https://c1euro.com/blog/reinventer-livraison-experience-humaine/</loc>
-</url>
-<url>
-<loc>https://c1euro.com/blog/trajets-reguliers-c1euro/</loc>
-</url>
-<url>
-<loc>https://c1euro.com/accueil/ville/</loc>
+<loc>https://c1euro.com/conseils-livraisons-ete/</loc>
+<lastmod>2025-07-27T18:42:06+02:00</lastmod>
+<image:image>
+<image:loc>https://c1euro.com/media/posts/27/6180406.webp</image:loc>
+<image:title><![CDATA[Livraison l'été]]></image:title>
+</image:image>
 </url>
 <url>
 <loc>https://c1euro.com/course-en-ligne/</loc>
@@ -110,6 +109,10 @@
 <image:loc>https://c1euro.com/media/posts/5/b430f69d910f82bf07dca72bc21a49aa5887710c-80x80_Zhczk2-1-2-2.svg</image:loc>
 <image:title><![CDATA[livraison à domicile]]></image:title>
 </image:image>
+</url>
+<url>
+<loc>https://c1euro.com/destockage-magasin-pas-cher-c1euro/</loc>
+<lastmod>2025-07-27T17:49:38+02:00</lastmod>
 </url>
 <url>
 <loc>https://c1euro.com/high-tech-premium/</loc>
@@ -338,6 +341,14 @@
 <image:loc>https://c1euro.com/media/posts/22/1-2.svg</image:loc>
 <image:title><![CDATA[]]></image:title>
 </image:image>
+</url>
+<url>
+<loc>https://c1euro.com/reinventer-livraison-experience-humaine/</loc>
+<lastmod>2025-07-26T23:11:19+02:00</lastmod>
+</url>
+<url>
+<loc>https://c1euro.com/trajets-reguliers-c1euro/</loc>
+<lastmod>2025-07-27T14:30:18+02:00</lastmod>
 </url>
 <url>
 <loc>https://c1euro.com/vendre-sur-application-c1euro/</loc>
