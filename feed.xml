@@ -3,7 +3,7 @@
     <title>c1euro.com</title>
     <link href="https://c1euro.com/feed.xml" rel="self" />
     <link href="https://c1euro.com" />
-    <updated>2025-07-27T03:20:14+02:00</updated>
+    <updated>2025-07-27T14:22:35+02:00</updated>
     <author>
         <name>c1euro</name>
     </author>
@@ -335,6 +335,7 @@
         </author>
         <link href="https://c1euro.com/conseils-livraisons-ete/"/>
         <id>https://c1euro.com/conseils-livraisons-ete/</id>
+            <category term="Option de l&#x27;application"/>
             <category term="Astuces"/>
 
         <updated>2025-07-25T23:30:07+02:00</updated>
