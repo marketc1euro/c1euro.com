@@ -346,14 +346,14 @@
     document.getElementById('popup').style.display = 'none';
   });
 
-  // Umami tracking
+  // Umami tracking : bouton clic
   document.getElementById('launch-app-btn').addEventListener('click', function () {
-    if (typeof window.umami === 'function') {
-      umami('popdownload');
+    if (typeof window.umami === 'object' && typeof umami.track === 'function') {
+      umami.track('popdownload');
     }
   });
 
-  // Affichage conditionnel du popup
+  // Affichage conditionnel du popup + tracking affichage
   (function() {
     const popup = document.getElementById('popup');
     const now = Date.now();
@@ -364,6 +364,9 @@
 
     function openPopup() {
       popup.style.display = 'flex';
+      if (typeof window.umami === 'object' && typeof umami.track === 'function') {
+        umami.track('popup-affiché');
+      }
     }
 
     function updateTimes(key, value) {
