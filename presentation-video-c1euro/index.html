@@ -259,77 +259,70 @@
     if (titre && titre.textContent.trim() === "Tags") {
         titre.textContent = "Le blog";
     }
-});</script><script async defer="defer" src="https://cloud.umami.is/script.js" data-website-id="edb4f2a1-5cdf-4ef3-b837-efe910763b4b"></script><div id="popup" style="position: fixed; inset: 0; background: #161718; display: none; justify-content: center; align-items: center; z-index: 99999;"><div style="background: #161718; width: 100%; height: 100%; padding: 30px; overflow-y: auto; position: relative; display: flex; flex-direction: column; justify-content: center; align-items: center;"><button id="popup-close" style="position: absolute; top: 15px; right: 20px; width: 30px; height: 30px; background: transparent; border: none; padding: 0; cursor: pointer;" title="Fermer" aria-label="Fermer"><img src="https://c1euro.com/media/posts/25/aabf409156b2bcde53225f3492dda1ba.svg" alt="Fermer" style="width: 100%; height: 100%; display: block;"></button><div id="lottie-container" style="width: 300px; height: 300px; margin-bottom: 20px;"></div><div style="display: flex; justify-content: center; width: 100%; margin-bottom: 25px;"><div style="display: flex; gap: 15px; overflow-x: auto; padding: 10px 0; max-width: 100%;"><div style="flex: 0 0 140px; background: #242528; border-radius: 8px; padding: 12px; text-align: center;"><img src="https://c1euro.com/media/posts/15/4cdecc1f11ba304d07d53eac145691a045585410-80x80_Z1T7HQb-2.svg" alt="" style="width: 80px; height: 80px; margin: 0 auto 8px;"><div style="background: #161718; color: #fff; border-radius: 999px; padding: 4px 12px; font-size: 0.85em;">Mode</div></div><div style="flex: 0 0 140px; background: #242528; border-radius: 8px; padding: 12px; text-align: center;"><img src="https://c1euro.com/media/posts/15/7c505ae37f53d46df50d526fc771b0084c867e64-80x80_16paFn-1.svg" alt="" style="width: 80px; height: 80px; margin: 0 auto 8px;"><div style="background: #161718; color: #fff; border-radius: 999px; padding: 4px 12px; font-size: 0.85em;">Alimentation</div></div><div style="flex: 0 0 140px; background: #242528; border-radius: 8px; padding: 12px; text-align: center;"><img src="https://c1euro.com/media/posts/15/700c06cf291d4a213547eb48733aea2422f06f87-80x80_ZNVBu0.svg" alt="" style="width: 80px; height: 80px; margin: 0 auto 8px;"><div style="background: #161718; color: #fff; border-radius: 999px; padding: 4px 12px; font-size: 0.85em;">High-tech</div></div><div style="flex: 0 0 140px; background: #242528; border-radius: 8px; padding: 12px; text-align: center;"><img src="https://c1euro.com/media/posts/15/b430f69d910f82bf07dca72bc21a49aa5887710c-80x80_Zhczk2-1.svg" alt="" style="width: 80px; height: 80px; margin: 0 auto 8px;"><div style="background: #161718; color: #fff; border-radius: 999px; padding: 4px 12px; font-size: 0.85em;">Livreur</div></div></div></div><div style="text-align: center; font-size: 1.2em; margin-bottom: 15px; font-family: 'Public Sans', sans-serif; color: #000;"><span style="color: #95a5a6;">Cliquez ci-dessous pour télécharger l'application C1EURO</span></div><p style="text-align: center; margin-top: 0; margin-bottom: 5px;"><a href="https://link.c1euro.com/qrcode" id="launch-app-btn" style="display: inline-block; padding: 14px 28px; background-color: #4217f4; color: #fff; text-decoration: none; border-radius: 9999px; font-size: 16px; font-weight: 600; font-family: 'Public Sans', sans-serif;">Lancer l'application C1EURO</a></p></div></div><script>document.getElementById('popup-close').addEventListener('click', function () {
+});</script><script async defer="defer" src="https://cloud.umami.is/script.js" data-website-id="edb4f2a1-5cdf-4ef3-b837-efe910763b4b"></script><div id="popup" style="position: fixed; inset: 0; background: #161718; display: none; justify-content: center; align-items: center; z-index: 99999;"><div style="background: #161718; width: 100%; height: 100%; padding: 30px; overflow-y: auto; position: relative; display: flex; flex-direction: column; justify-content: center; align-items: center;"><button id="popup-close" style="position: absolute; top: 15px; right: 20px; width: 30px; height: 30px; background: transparent; border: none; padding: 0; cursor: pointer;" title="Fermer" aria-label="Fermer"><img src="https://c1euro.com/media/posts/25/aabf409156b2bcde53225f3492dda1ba.svg" alt="Fermer" style="width: 100%; height: 100%; display: block;"></button><div id="lottie-container" style="width: 300px; height: 300px; margin-bottom: 20px;"></div><div style="display: flex; justify-content: center; width: 100%; margin-bottom: 25px;"><div style="display: flex; gap: 15px; overflow-x: auto; padding: 10px 0; max-width: 100%;"><div style="flex: 0 0 140px; background: #242528; border-radius: 8px; padding: 12px; text-align: center;"><img src="https://c1euro.com/media/posts/15/4cdecc1f11ba304d07d53eac145691a045585410-80x80_Z1T7HQb-2.svg" alt="" style="width: 80px; height: 80px; margin: 0 auto 8px;"><div style="background: #161718; color: #fff; border-radius: 999px; padding: 4px 12px; font-size: 0.85em;">Mode</div></div></div></div><div style="text-align: center; font-size: 1.2em; margin-bottom: 15px; font-family: 'Public Sans', sans-serif; color: #000;"><span style="color: #95a5a6;">Cliquez ci-dessous pour télécharger l'application C1EURO</span></div><p style="text-align: center; margin-top: 0; margin-bottom: 5px;"><a href="https://link.c1euro.com/qrcode" id="launch-app-btn" style="display: inline-block; padding: 14px 28px; background-color: #4217f4; color: #fff; text-decoration: none; border-radius: 9999px; font-size: 16px; font-weight: 600; font-family: 'Public Sans', sans-serif;">Lancer l'application C1EURO</a></p></div></div><script>// Fermer le popup
+  document.getElementById('popup-close').addEventListener('click', function () {
     document.getElementById('popup').style.display = 'none';
   });
 
+  // Tracking clic bouton + init Lottie au clic seulement
   document.getElementById('launch-app-btn').addEventListener('click', function () {
     if (typeof window.umami === 'object' && typeof umami.track === 'function') {
       umami.track('popdownload');
     }
+
+    if (!window.lottieLoaded) {
+      loadLottie();
+    }
   });
 
+  // Afficher le popup avec tracking
   function openPopup() {
     const popup = document.getElementById('popup');
     popup.style.display = 'flex';
 
-    // Tracking ouverture
     if (typeof window.umami === 'object' && typeof umami.track === 'function') {
       umami.track('popup-affiché');
     }
-
-    // Charger Lottie une seule fois
-    if (!window.lottieLoaded) {
-      const script = document.createElement('script');
-      script.src = 'https://unpkg.com/lottie-web@5.10.1/build/player/lottie.min.js';
-      script.onload = function () {
-        window.lottieLoaded = true;
-
-        const lottieInstance = lottie.loadAnimation({
-          container: document.getElementById('lottie-container'),
-          renderer: 'svg',
-          loop: false,
-          autoplay: false,
-          path: '/media/files/area.json'
-        });
-
-        let playCount = 0;
-        const maxPlays = 1;
-
-        lottieInstance.addEventListener('complete', () => {
-          playCount++;
-          if (playCount < maxPlays) {
-            lottieInstance.goToAndPlay(0, true);
-          }
-        });
-
-        lottieInstance.play();
-      };
-      document.head.appendChild(script);
-    }
   }
 
-  // Affichage conditionnel du popup
+  // Lottie chargé seulement à la demande
+  function loadLottie() {
+    const script = document.createElement('script');
+    script.src = 'https://unpkg.com/lottie-web@5.10.1/build/player/lottie.min.js';
+    script.onload = function () {
+      window.lottieLoaded = true;
+      const animation = lottie.loadAnimation({
+        container: document.getElementById('lottie-container'),
+        renderer: 'svg',
+        loop: false,
+        autoplay: true,
+        path: '/media/files/area.json' // ton fichier JSON
+      });
+    };
+    document.head.appendChild(script);
+  }
+
+  // Affichage conditionnel
   (function () {
     const now = Date.now();
-    let firstOpenTime = parseInt(localStorage.getItem('popup_first_open')) || null;
-    let secondOpenTime = parseInt(localStorage.getItem('popup_second_open')) || null;
-    let lastOpenTime = parseInt(localStorage.getItem('popup_last_open')) || null;
+    let first = parseInt(localStorage.getItem('popup_first_open')) || null;
+    let second = parseInt(localStorage.getItem('popup_second_open')) || null;
+    let last = parseInt(localStorage.getItem('popup_last_open')) || null;
 
-    function updateTimes(key, value) {
-      localStorage.setItem(key, value.toString());
+    function save(key, val) {
+      localStorage.setItem(key, val.toString());
     }
 
-    if (!firstOpenTime) {
+    if (!first) {
       openPopup();
-      updateTimes('popup_first_open', now);
-      updateTimes('popup_last_open', now);
-    } else if (!secondOpenTime && now - firstOpenTime >= 20000) {
+      save('popup_first_open', now);
+      save('popup_last_open', now);
+    } else if (!second && now - first >= 20000) {
       openPopup();
-      updateTimes('popup_second_open', now);
-      updateTimes('popup_last_open', now);
-    } else if (secondOpenTime && (!lastOpenTime || now - lastOpenTime >= 180000)) {
+      save('popup_second_open', now);
+      save('popup_last_open', now);
+    } else if (second && (!last || now - last >= 180000)) {
       openPopup();
-      updateTimes('popup_last_open', now);
+      save('popup_last_open', now);
     }
   })();</script></body></html>
