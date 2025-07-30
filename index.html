@@ -342,11 +342,20 @@
     document.getElementById('popup').style.display = 'none';
   });
 
-  // Umami tracking : bouton clic
-  document.getElementById('launch-app-btn').addEventListener('click', function () {
+  // Umami tracking : bouton clic avec délai avant redirection
+  document.getElementById('launch-app-btn').addEventListener('click', function (e) {
+    e.preventDefault(); // Empêche la redirection immédiate
+
+    const targetUrl = this.href;
+
     if (typeof window.umami === 'object' && typeof umami.track === 'function') {
       umami.track('popdownload');
     }
+
+    // Donne le temps au tracking d'être envoyé avant de rediriger
+    setTimeout(() => {
+      window.location.href = targetUrl;
+    }, 300);
   });
 
   // Affichage conditionnel du popup + tracking affichage
