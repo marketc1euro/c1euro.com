@@ -274,6 +274,10 @@
   #popup.show {
     display: flex; /* visible */
     opacity: 1;
+  }
+  /* Bloquer scroll du body quand popup ouvert */
+  body.no-scroll {
+    overflow: hidden;
   }</style><div id="popup" aria-hidden="true" role="dialog" aria-modal="true" aria-labelledby="popup-title" aria-describedby="popup-desc"><div style="background: #161718; width: 100%; height: 100%; padding: 30px; overflow-y: auto; position: relative; display: flex; flex-direction: column; justify-content: center; align-items: center;"><button id="popup-close" style="position: absolute; top: 15px; right: 20px; width: 30px; height: 30px; background: transparent; border: none; padding: 0; cursor: pointer;" title="Fermer" aria-label="Fermer"><img src="https://c1euro.com/media/posts/25/aabf409156b2bcde53225f3492dda1ba.svg" alt="Fermer" style="width: 100%; height: 100%; display: block;"></button><div id="lottie-container" style="width: 300px; height: 300px; margin-bottom: 20px;"></div><script>const lottieInstance = lottie.loadAnimation({
         container: document.getElementById('lottie-container'),
         renderer: 'svg',
@@ -296,17 +300,19 @@
   const popupCloseBtn = document.getElementById('popup-close');
   const launchAppBtn = document.getElementById('launch-app-btn');
 
-  // Fonction pour afficher popup avec fade
+  // Fonction pour afficher popup avec fade et bloquer scroll du body
   function showPopup() {
     popup.classList.add('show');
     popup.setAttribute('aria-hidden', 'false');
+    document.body.classList.add('no-scroll'); // Bloque scroll du body
   }
 
-  // Fonction pour cacher popup avec fade
+  // Fonction pour cacher popup avec fade et réactiver scroll du body
   function hidePopup() {
     popup.classList.remove('show');
     popup.setAttribute('aria-hidden', 'true');
-    // Après transition, on cache en display:none pour éviter clic dessus
+    document.body.classList.remove('no-scroll'); // Réactive scroll du body
+
     popup.addEventListener('transitionend', function handler() {
       if (!popup.classList.contains('show')) {
         popup.style.display = 'none';
@@ -318,7 +324,6 @@
   // Ouvrir popup (gestion display pour que transition fonctionne)
   function openPopup() {
     popup.style.display = 'flex'; // Nécessaire pour que la transition opacity soit visible
-    // Timeout pour forcer le repaint avant d'ajouter la classe 'show' (déclenche transition)
     setTimeout(() => showPopup(), 10);
 
     if (typeof window.umami === 'object' && typeof umami.track === 'function') {
