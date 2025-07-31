@@ -363,7 +363,7 @@
   #popup.show {
     display: flex; /* visible */
     opacity: 1;
-  }</style><div id="popup" aria-hidden="true" role="dialog" aria-modal="true" aria-labelledby="popup-title" aria-describedby="popup-desc"><div style="background: #161718; width: 100%; height: 100%; padding: 30px; overflow-y: auto; position: relative; display: flex; flex-direction: column; justify-content: center; align-items: center;"><button id="popup-close" style="position: absolute; top: 15px; right: 20px; width: 30px; height: 30px; background: transparent; border: none; padding: 0; cursor: pointer;" title="Fermer" aria-label="Fermer"><img src="https://c1euro.com/media/posts/25/aabf409156b2bcde53225f3492dda1ba.svg" alt="Fermer" style="width: 100%; height: 100%; display: block;"></button><div id="lottie-container" style="width: 300px; height: 300px; margin-bottom: 20px;"></div><script>const lottieInstance = lottie.loadAnimation({
+  }</style><div id="popup" aria-hidden="true" role="dialog" aria-modal="true" aria-labelledby="popup-title" aria-describedby="popup-desc"><div style="background: #161718; width: 100%; height: 100%; padding: 30px; overflow-y: auto; position: relative; display: flex; flex-direction: column; justify-content: flex-start; align-items: center; padding-top: 40px;"><button id="popup-close" style="position: absolute; top: 15px; right: 20px; width: 30px; height: 30px; background: transparent; border: none; padding: 0; cursor: pointer;" title="Fermer" aria-label="Fermer"><img src="https://c1euro.com/media/posts/25/aabf409156b2bcde53225f3492dda1ba.svg" alt="Fermer" style="width: 100%; height: 100%; display: block;"></button><div id="lottie-container" style="width: 300px; height: 300px; margin-bottom: 10px;"></div><script>const lottieInstance = lottie.loadAnimation({
         container: document.getElementById('lottie-container'),
         renderer: 'svg',
         loop: false,
@@ -385,17 +385,14 @@
   const popupCloseBtn = document.getElementById('popup-close');
   const launchAppBtn = document.getElementById('launch-app-btn');
 
-  // Fonction pour afficher popup avec fade
   function showPopup() {
     popup.classList.add('show');
     popup.setAttribute('aria-hidden', 'false');
   }
 
-  // Fonction pour cacher popup avec fade
   function hidePopup() {
     popup.classList.remove('show');
     popup.setAttribute('aria-hidden', 'true');
-    // Après transition, on cache en display:none pour éviter clic dessus
     popup.addEventListener('transitionend', function handler() {
       if (!popup.classList.contains('show')) {
         popup.style.display = 'none';
@@ -404,30 +401,24 @@
     });
   }
 
-  // Ouvrir popup (gestion display pour que transition fonctionne)
   function openPopup() {
-    popup.style.display = 'flex'; // Nécessaire pour que la transition opacity soit visible
-    // Timeout pour forcer le repaint avant d'ajouter la classe 'show' (déclenche transition)
+    popup.style.display = 'flex';
     setTimeout(() => showPopup(), 10);
-
     if (typeof window.umami === 'object' && typeof umami.track === 'function') {
       umami.track('popup-affiché');
     }
   }
 
-  // Fermer popup au clic bouton
   popupCloseBtn.addEventListener('click', () => {
     hidePopup();
   });
 
-  // Tracking bouton clic
   launchAppBtn.addEventListener('click', () => {
     if (typeof window.umami === 'object' && typeof umami.track === 'function') {
       umami.track('popdownload');
     }
   });
 
-  // Logique ouverture conditionnelle avec timers + stockage local
   (function() {
     const now = Date.now();
 
