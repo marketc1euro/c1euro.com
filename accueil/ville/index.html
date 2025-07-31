@@ -427,7 +427,7 @@
         return;
       }
 
-      if (firstOpenTime && !secondOpenTime && now - firstOpenTime >= 20000) {
+      if (firstOpenTime && !secondOpenTime && now - firstOpenTime >= 120000) {
         openPopup();
         updateTimes('popup_second_open', now);
         updateTimes('popup_last_open', now);
