@@ -373,6 +373,20 @@ C1EURO réunit les meilleures marques high-tech du marché. "><meta property=
   const popupCloseBtn = document.getElementById('popup-close');
   const launchAppBtn = document.getElementById('launch-app-btn');
 
+  // ✅ Fonction robuste pour Umami
+  function trackUmami(eventName) {
+    const tryTrack = () => {
+      if (typeof window.umami === 'function') {
+        window.umami(eventName);
+        console.log(`[UMAMI] Événement envoyé : ${eventName}`);
+      } else {
+        console.log(`[UMAMI] En attente de chargement pour ${eventName}...`);
+        setTimeout(tryTrack, 300);
+      }
+    };
+    tryTrack();
+  }
+
   function showPopup() {
     popup.classList.add('show');
     popup.setAttribute('aria-hidden', 'false');
@@ -395,19 +409,12 @@ C1EURO réunit les meilleures marques high-tech du marché. "><meta property=
   function openPopup() {
     popup.style.display = 'flex';
     setTimeout(() => showPopup(), 10);
-
-    // Tracking de la vue popup
-    if (typeof window.umami === 'function') {
-      umami('popup-view');
-    }
+    trackUmami('popup-view'); // ✅ tracking vue
   }
 
-  // Clic sur le bouton "Lancer l'app"
+  // ✅ Tracking clic bouton
   launchAppBtn.addEventListener('click', (e) => {
-    // Tracking clic
-    if (typeof window.umami === 'function') {
-      umami('popup-click');
-    }
+    trackUmami('popup-click');
 
     const isAndroid = /android/i.test(navigator.userAgent);
     const isIOS = /iPhone|iPad|iPod/i.test(navigator.userAgent);
@@ -419,7 +426,6 @@ C1EURO réunit les meilleures marques high-tech du marché. "><meta property=
     }
   });
 
-  // Fermer au clic sur la croix
   popupCloseBtn.addEventListener('click', hidePopup);
 
   // Affichage conditionnel avec localStorage
