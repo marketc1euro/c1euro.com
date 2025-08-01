@@ -425,6 +425,19 @@
     }
   });
 
+  // 🔥 Ajout : recharge la page si desktop, sinon laisse lien mobile
+  launchAppBtn.addEventListener('click', (e) => {
+    const isAndroid = /android/i.test(navigator.userAgent);
+    const isIOS = /iPhone|iPad|iPod/i.test(navigator.userAgent);
+    const isMobile = isAndroid || isIOS;
+
+    if (!isMobile) {
+      // Desktop : empêche la redirection et recharge la page
+      e.preventDefault();
+      location.reload();
+    }
+  });
+
   // Logique ouverture conditionnelle avec timers + stockage local
   (function() {
     const now = Date.now();
