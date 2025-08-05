@@ -621,30 +621,42 @@ document.addEventListener("DOMContentLoaded", function() {
       <span style="color: #95a5a6;">Cliquez ci-dessous pour télécharger l'application C1EURO</span>
     </div>
 
-    <!-- Bouton -->
-    <p style="text-align: center; margin-top: 0; margin-bottom: 5px;">
-      <a href="https://link.c1euro.com/qrcode" id="launch-app-btn" onclick="umami.track('popup-click')" style="display: inline-block; padding: 14px 28px; background-color: #4217f4; color: #fff; text-decoration: none; border-radius: 9999px; font-size: 16px; font-weight: 600; font-family: 'Public Sans', sans-serif;">
-        Lancer l'application C1EURO
-      </a>
-    </p>
-  </div>
-</div>
+    <!-- BOUTON dans le popup -->
+<p style="text-align: center; margin-top: 0; margin-bottom: 5px;">
+  <a href="https://link.c1euro.com/qrcode" id="launch-app-btn" style="display: inline-block; padding: 14px 28px; background-color: #4217f4; color: #fff; text-decoration: none; border-radius: 9999px; font-size: 16px; font-weight: 600; font-family: 'Public Sans', sans-serif;">
+    Lancer l'application C1EURO
+  </a>
+</p>
 
-<!-- SCRIPT Umami au chargement -->
-<script>
-  window.addEventListener('load', function () {
-    if (window.umami) {
-      umami.track('popup-view');
-    }
-  });
-</script>
-
-<!-- JS d’ouverture/fermeture + logique popup -->
+<!-- SCRIPT UMAMI complet -->
 <script>
   window.addEventListener('load', function () {
     const popup = document.getElementById('popup');
     const popupCloseBtn = document.getElementById('popup-close');
+    const launchAppBtn = document.getElementById('launch-app-btn');
 
+    // Tracking d'affichage du popup
+    if (window.umami) {
+      umami.track('popup-view');
+    }
+
+    // Tracking au clic avec gestion mobile/PC
+    launchAppBtn.addEventListener('click', function (e) {
+      if (window.umami) {
+        umami.track('popup-click');
+      }
+
+      const isAndroid = /android/i.test(navigator.userAgent);
+      const isIOS = /iPhone|iPad|iPod/i.test(navigator.userAgent);
+      const isMobile = isAndroid || isIOS;
+
+      if (!isMobile) {
+        e.preventDefault();
+        location.reload(); // Reste sur la même page
+      }
+    });
+
+    // Gestion affichage popup
     function showPopup() {
       popup.classList.add('show');
       popup.setAttribute('aria-hidden', 'false');
@@ -663,18 +675,19 @@ document.addEventListener("DOMContentLoaded", function() {
       });
     }
 
+    popupCloseBtn.addEventListener('click', hidePopup);
+
     function openPopup() {
       popup.style.display = 'flex';
       setTimeout(() => showPopup(), 10);
     }
 
-    popupCloseBtn.addEventListener('click', hidePopup);
-
+    // Affichage conditionnel (localStorage + délais)
     (function () {
       const now = Date.now();
-      let firstOpenTime = parseInt(localStorage.getItem('popup_first_open')) || null;
-      let secondOpenTime = parseInt(localStorage.getItem('popup_second_open')) || null;
-      let lastOpenTime = parseInt(localStorage.getItem('popup_last_open')) || null;
+      const firstOpenTime = parseInt(localStorage.getItem('popup_first_open')) || null;
+      const secondOpenTime = parseInt(localStorage.getItem('popup_second_open')) || null;
+      const lastOpenTime = parseInt(localStorage.getItem('popup_last_open')) || null;
 
       function updateTimes(key, value) {
         localStorage.setItem(key, value.toString());
