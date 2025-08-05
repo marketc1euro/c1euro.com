@@ -869,14 +869,7 @@ document.addEventListener("DOMContentLoaded", function() {
       }
     }
 
-    // ✅ 🚨 Changement ici : lancement de tryOpenPopup au 2ᵉ clic
-    let clickCount = 0;
-    document.addEventListener('click', () => {
-      clickCount++;
-      if (clickCount === 2) {
-        tryOpenPopup();
-      }
-    });
+    tryOpenPopup();
   })();
 </script>
 
