@@ -217,24 +217,6 @@
   });
 </script>
 
-<link rel="stylesheet" href="/css/style.css?v=988e814" media="print" onload="this.onload=null;this.media='all';">
-<link rel="stylesheet" href="/coreLightboxGallery/photoswipe.min.css" media="print" onload="this.onload=null;this.media='all';">
-<noscript>
-  <link rel="stylesheet" href="/css/style.css?v=988e814">
-  <link rel="stylesheet" href="/coreLightboxGallery/photoswipe.min.css">
-</noscript>
-<script>
-  document.addEventListener("DOMContentLoaded", () => {
-    const hasGallery = document.querySelector('.pswp');
-    if (hasGallery) {
-      const link = document.createElement("link");
-      link.rel = "stylesheet";
-      link.href = "/coreLightboxGallery/photoswipe.min.css";
-      link.media = "all";
-      document.head.appendChild(link);
-    }
-  });
-</script>
 
 
            <style>.fi{fill:none;stroke-linecap:round;stroke-linejoin:round;vertical-align:middle}</style>
