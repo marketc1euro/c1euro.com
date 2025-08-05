@@ -598,6 +598,9 @@ document.addEventListener("DOMContentLoaded", function() {
 });
 </script>
 
+<!-- UMAMI -->
+<script defer src="https://cloud.umami.is/script.js" data-website-id="edb4f2a1-5cdf-4ef3-b837-efe910763b4b"></script>
+
 <!-- POPUP -->
 <style>
   #popup {
@@ -622,14 +625,12 @@ document.addEventListener("DOMContentLoaded", function() {
 
 <div id="popup" aria-hidden="true" role="dialog" aria-modal="true" aria-labelledby="popup-title" aria-describedby="popup-desc">
   <div style="background: #161718; width: 100%; height: 100%; padding: 30px; overflow-y: auto; position: relative; display: flex; flex-direction: column; justify-content: center; align-items: center;">
-
-    <!-- Bouton fermer -->
     <button id="popup-close" style="position: absolute; top: 15px; right: 20px; width: 30px; height: 30px; background: transparent; border: none; padding: 0; cursor: pointer;" title="Fermer" aria-label="Fermer">
       <img src="https://c1euro.com/media/posts/25/aabf409156b2bcde53225f3492dda1ba.svg" alt="Fermer" style="width: 100%; height: 100%; display: block;">
     </button>
 
-    <!-- Lottie -->
     <div id="lottie-container" style="width: 300px; height: 300px; margin-bottom: 20px;"></div>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/lottie-web/5.7.13/lottie.min.js"></script>
     <script>
       const lottieInstance = lottie.loadAnimation({
         container: document.getElementById('lottie-container'),
@@ -638,57 +639,37 @@ document.addEventListener("DOMContentLoaded", function() {
         autoplay: false,
         path: '/media/files/area.json'
       });
-
-      let playCount = 0;
-      const maxPlays = 1;
-
       lottieInstance.addEventListener('complete', () => {
-        playCount++;
-        if (playCount < maxPlays) {
-          lottieInstance.goToAndPlay(0, true);
-        }
+        lottieInstance.goToAndStop(0, true);
       });
-
-      lottieInstance.play();
     </script>
 
-     <!-- Carrousel scrollable -->
     <div style="display: flex; justify-content: center; width: 100%; margin-bottom: 25px;">
       <div style="display: flex; gap: 15px; overflow-x: auto; padding: 10px 0; max-width: 100%;">
-
-        <!-- Box 1 -->
+        <!-- Carrousel Items -->
         <div style="flex: 0 0 140px; background: #242528; border-radius: 8px; padding: 12px; text-align: center;">
-          <img src="https://c1euro.com/media/posts/15/4cdecc1f11ba304d07d53eac145691a045585410-80x80_Z1T7HQb-2.svg" alt="" style="width: 80px; height: 80px; margin: 0 auto 8px;">
+          <img src="https://c1euro.com/media/posts/15/4cdecc1f11ba304d07d53eac145691a045585410-80x80_Z1T7HQb-2.svg" style="width: 80px; height: 80px; margin: 0 auto 8px;">
           <div style="background: #161718; color: #fff; border-radius: 999px; padding: 4px 12px; font-size: 0.85em;">Mode</div>
         </div>
-
-        <!-- Box 2 -->
         <div style="flex: 0 0 140px; background: #242528; border-radius: 8px; padding: 12px; text-align: center;">
-          <img src="https://c1euro.com/media/posts/15/7c505ae37f53d46df50d526fc771b0084c867e64-80x80_16paFn-1.svg" alt="" style="width: 80px; height: 80px; margin: 0 auto 8px;">
+          <img src="https://c1euro.com/media/posts/15/7c505ae37f53d46df50d526fc771b0084c867e64-80x80_16paFn-1.svg" style="width: 80px; height: 80px; margin: 0 auto 8px;">
           <div style="background: #161718; color: #fff; border-radius: 999px; padding: 4px 12px; font-size: 0.85em;">Alimentation</div>
         </div>
-
-        <!-- Box 3 -->
         <div style="flex: 0 0 140px; background: #242528; border-radius: 8px; padding: 12px; text-align: center;">
-          <img src="https://c1euro.com/media/posts/15/700c06cf291d4a213547eb48733aea2422f06f87-80x80_ZNVBu0.svg" alt="" style="width: 80px; height: 80px; margin: 0 auto 8px;">
+          <img src="https://c1euro.com/media/posts/15/700c06cf291d4a213547eb48733aea2422f06f87-80x80_ZNVBu0.svg" style="width: 80px; height: 80px; margin: 0 auto 8px;">
           <div style="background: #161718; color: #fff; border-radius: 999px; padding: 4px 12px; font-size: 0.85em;">High-tech</div>
         </div>
-
-        <!-- Box 4 -->
         <div style="flex: 0 0 140px; background: #242528; border-radius: 8px; padding: 12px; text-align: center;">
-          <img src="https://c1euro.com/media/posts/15/b430f69d910f82bf07dca72bc21a49aa5887710c-80x80_Zhczk2-1.svg" alt="" style="width: 80px; height: 80px; margin: 0 auto 8px;">
+          <img src="https://c1euro.com/media/posts/15/b430f69d910f82bf07dca72bc21a49aa5887710c-80x80_Zhczk2-1.svg" style="width: 80px; height: 80px; margin: 0 auto 8px;">
           <div style="background: #161718; color: #fff; border-radius: 999px; padding: 4px 12px; font-size: 0.85em;">Livreur</div>
         </div>
-
       </div>
     </div>
 
-    <!-- Texte -->
-    <div id="popup-desc" style="text-align: center; font-size: 1.2em; margin-bottom: 15px; font-family: 'Public Sans', sans-serif; color: #000;">
-      <span style="color: #95a5a6;">Cliquez ci-dessous pour télécharger l'application C1EURO</span>
+    <div id="popup-desc" style="text-align: center; font-size: 1.2em; margin-bottom: 15px; font-family: 'Public Sans', sans-serif; color: #95a5a6;">
+      Cliquez ci-dessous pour télécharger l'application C1EURO
     </div>
 
-    <!-- Bouton -->
     <p style="text-align: center; margin-top: 0; margin-bottom: 5px;">
       <a href="https://link.c1euro.com/qrcode" id="launch-app-btn" style="display: inline-block; padding: 14px 28px; background-color: #4217f4; color: #fff; text-decoration: none; border-radius: 9999px; font-size: 16px; font-weight: 600; font-family: 'Public Sans', sans-serif;">
         Lancer l'application C1EURO
@@ -697,7 +678,7 @@ document.addEventListener("DOMContentLoaded", function() {
   </div>
 </div>
 
-<!-- JS d'ouverture / fermeture / tracking Umami -->
+<!-- SCRIPT POPUP -->
 <script>
   const popup = document.getElementById('popup');
   const popupCloseBtn = document.getElementById('popup-close');
@@ -707,26 +688,29 @@ document.addEventListener("DOMContentLoaded", function() {
     const tryTrack = () => {
       if (typeof window.umami === 'function') {
         window.umami(eventName);
-        console.log(`[UMAMI] Événement envoyé : ${eventName}`);
+        console.log('[UMAMI] Événement :', eventName);
       } else {
-        console.log(`[UMAMI] En attente de chargement pour ${eventName}...`);
-        setTimeout(tryTrack, 300);
+        setTimeout(tryTrack, 200);
       }
     };
     tryTrack();
   }
 
   function showPopup() {
-    popup.classList.add('show');
-    popup.setAttribute('aria-hidden', 'false');
-    document.body.classList.add('no-scroll');
+    popup.style.display = 'flex';
+    setTimeout(() => {
+      popup.classList.add('show');
+      popup.setAttribute('aria-hidden', 'false');
+      document.body.classList.add('no-scroll');
+    }, 10);
+    trackUmami('popup-view');
+    if (window.lottieInstance) lottieInstance.play();
   }
 
   function hidePopup() {
     popup.classList.remove('show');
     popup.setAttribute('aria-hidden', 'true');
     document.body.classList.remove('no-scroll');
-
     popup.addEventListener('transitionend', function handler() {
       if (!popup.classList.contains('show')) {
         popup.style.display = 'none';
@@ -735,72 +719,44 @@ document.addEventListener("DOMContentLoaded", function() {
     });
   }
 
-  function openPopup() {
-    popup.style.display = 'flex';
-    setTimeout(() => showPopup(), 10);
-    trackUmami('popup-view');
-  }
+  popupCloseBtn.addEventListener('click', hidePopup);
 
   launchAppBtn.addEventListener('click', (e) => {
     trackUmami('popup-click');
-
-    const isAndroid = /android/i.test(navigator.userAgent);
-    const isIOS = /iPhone|iPad|iPod/i.test(navigator.userAgent);
-    const isMobile = isAndroid || isIOS;
-
+    const isMobile = /android|iphone|ipad|ipod/i.test(navigator.userAgent);
     if (!isMobile) {
       e.preventDefault();
       location.reload();
     }
   });
 
-  popupCloseBtn.addEventListener('click', hidePopup);
-
-  // ✅ Comportement : ouverture au 2e clic la première fois, puis toutes les 2 ou 3 minutes
   (function () {
-    const now = Date.now();
     const FIRST_OPEN_KEY = 'popup_first_open';
     const SECOND_OPEN_KEY = 'popup_second_open';
     const LAST_OPEN_KEY = 'popup_last_open';
-    const CLICK_COUNT_KEY = 'popup_click_count';
 
-    let firstOpen = parseInt(localStorage.getItem(FIRST_OPEN_KEY)) || null;
-    let secondOpen = parseInt(localStorage.getItem(SECOND_OPEN_KEY)) || null;
-    let lastOpen = parseInt(localStorage.getItem(LAST_OPEN_KEY)) || null;
+    const now = Date.now();
+    const firstOpen = parseInt(localStorage.getItem(FIRST_OPEN_KEY)) || null;
+    const secondOpen = parseInt(localStorage.getItem(SECOND_OPEN_KEY)) || null;
+    const lastOpen = parseInt(localStorage.getItem(LAST_OPEN_KEY)) || null;
 
-    function updateTime(key, value) {
-      localStorage.setItem(key, value.toString());
+    function shouldOpenAfter(ref, minutes) {
+      return !ref || (Date.now() - ref >= minutes * 60 * 1000);
     }
 
-    function shouldOpenAfterTime(last, delay) {
-      return !last || (Date.now() - last >= delay);
-    }
-
-    if (!firstOpen) {
-      // 👆 Première visite → attendre 2 clics
-      let clickCount = 0;
-      const clickListener = () => {
-        clickCount++;
-        if (clickCount === 2) {
-          openPopup();
-          const now = Date.now();
-          updateTime(FIRST_OPEN_KEY, now);
-          updateTime(LAST_OPEN_KEY, now);
-          document.removeEventListener('click', clickListener);
-        }
-      };
-      document.addEventListener('click', clickListener);
-    } else if (!secondOpen && shouldOpenAfterTime(firstOpen, 2 * 60 * 1000)) {
-      // 👆 2 minutes après le premier affichage
-      openPopup();
-      const now = Date.now();
-      updateTime(SECOND_OPEN_KEY, now);
-      updateTime(LAST_OPEN_KEY, now);
-    } else if (secondOpen && shouldOpenAfterTime(lastOpen, 3 * 60 * 1000)) {
-      // 👆 3 minutes après la dernière ouverture
-      openPopup();
-      const now = Date.now();
-      updateTime(LAST_OPEN_KEY, now);
+    if (!firstOpen && shouldOpenAfter(null, 2)) {
+      setTimeout(() => {
+        showPopup();
+        localStorage.setItem(FIRST_OPEN_KEY, Date.now());
+        localStorage.setItem(LAST_OPEN_KEY, Date.now());
+      }, 2 * 60 * 1000);
+    } else if (firstOpen && !secondOpen && shouldOpenAfter(firstOpen, 2)) {
+      showPopup();
+      localStorage.setItem(SECOND_OPEN_KEY, Date.now());
+      localStorage.setItem(LAST_OPEN_KEY, Date.now());
+    } else if (secondOpen && shouldOpenAfter(lastOpen, 3)) {
+      showPopup();
+      localStorage.setItem(LAST_OPEN_KEY, Date.now());
     }
   })();
 </script>
