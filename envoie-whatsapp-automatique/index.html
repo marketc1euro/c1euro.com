@@ -757,13 +757,15 @@ document.addEventListener("DOMContentLoaded", function() {
     </div>
 
     <!-- BOUTON dans le popup -->
-<p style="text-align: center; margin-top: 0; margin-bottom: 5px;">
-  <a href="https://link.c1euro.com/qrcode" id="launch-app-btn" style="display: inline-block; padding: 14px 28px; background-color: #4217f4; color: #fff; text-decoration: none; border-radius: 9999px; font-size: 16px; font-weight: 600; font-family: 'Public Sans', sans-serif;">
-    Lancer l'application C1EURO
-  </a>
-</p>
+    <p style="text-align: center; margin-top: 0; margin-bottom: 5px;">
+      <a href="https://link.c1euro.com/qrcode" id="launch-app-btn" style="display: inline-block; padding: 14px 28px; background-color: #4217f4; color: #fff; text-decoration: none; border-radius: 9999px; font-size: 16px; font-weight: 600; font-family: 'Public Sans', sans-serif;">
+        Lancer l'application C1EURO
+      </a>
+    </p>
+  </div>
+</div>
 
-<!-- SCRIPT UMAMI complet -->
+<!-- SCRIPT UMAMI complet avec délai 30s -->
 <script>
   window.addEventListener('load', function () {
     const popup = document.getElementById('popup');
@@ -817,7 +819,7 @@ document.addEventListener("DOMContentLoaded", function() {
       setTimeout(() => showPopup(), 10);
     }
 
-    // Affichage conditionnel (localStorage + délais)
+    // Affichage conditionnel (localStorage + délais) AVEC DÉLAI INITIAL 30s
     (function () {
       const now = Date.now();
       const firstOpenTime = parseInt(localStorage.getItem('popup_first_open')) || null;
@@ -830,9 +832,12 @@ document.addEventListener("DOMContentLoaded", function() {
 
       function tryOpenPopup() {
         if (!firstOpenTime) {
-          openPopup();
-          updateTimes('popup_first_open', now);
-          updateTimes('popup_last_open', now);
+          // Délai initial de 30 secondes
+          setTimeout(() => {
+            openPopup();
+            updateTimes('popup_first_open', Date.now());
+            updateTimes('popup_last_open', Date.now());
+          }, 30000);
           return;
         }
 
