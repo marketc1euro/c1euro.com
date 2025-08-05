@@ -217,6 +217,12 @@
   });
 </script>
 
+<!-- Style principal -->
+<link rel="stylesheet" href="/css/style.css?v=988e814" media="print" onload="this.media='all'">
+
+<!-- Photoswipe gallery -->
+<link rel="stylesheet" href="/coreLightboxGallery/photoswipe.min.css" media="print" onload="this.media='all'">
+
 
            <style>.fi{fill:none;stroke-linecap:round;stroke-linejoin:round;vertical-align:middle}</style>
     </head>
