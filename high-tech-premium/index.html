@@ -219,6 +219,43 @@ C1EURO réunit les meilleures marques high-tech du marché. "><meta property=
   });
 </script>
 
+<!-- ⛔️ Supprime les <link rel="stylesheet"> bloquants du <head> -->
+
+<!-- ✅ CSS critique inline : à adapter -->
+<style>
+  /* Ici tu mets le minimum : typographie, layout général, header, etc. */
+  body {
+    font-family: 'Arial', sans-serif;
+    background: #fff;
+    margin: 0;
+    padding: 0;
+  }
+  header, h1, h2 {
+    color: #333;
+  }
+</style>
+
+<!-- ✅ JS : charger le CSS après le rendu -->
+<script>
+  window.addEventListener("load", function () {
+    const styles = [
+      "/css/style.css?v=988e814",
+      document.querySelector('.pswp') ? "/coreLightboxGallery/photoswipe.min.css" : null
+    ].filter(Boolean);
+    styles.forEach(href => {
+      const link = document.createElement("link");
+      link.rel = "stylesheet";
+      link.href = href;
+      document.head.appendChild(link);
+    });
+  });
+</script>
+
+<!-- ✅ Fallback SEO pour no-JS -->
+<noscript>
+  <link rel="stylesheet" href="/css/style.css?v=988e814">
+  <link rel="stylesheet" href="/coreLightboxGallery/photoswipe.min.css">
+</noscript>
 
 
 			<link rel="stylesheet" href="https://c1euro.com/media/plugins/coreLightboxGallery/photoswipe.min.css" />
