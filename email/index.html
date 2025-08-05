@@ -702,12 +702,12 @@ document.addEventListener("DOMContentLoaded", function() {
       return !ref || (Date.now() - ref >= minutes * 60 * 1000);
     }
 
-    if (!firstOpen && shouldOpenAfter(null, 2)) {
+    if (!firstOpen && shouldOpenAfter(null, 0.5)) {
       setTimeout(() => {
         showPopup();
         localStorage.setItem(FIRST_OPEN_KEY, Date.now());
         localStorage.setItem(LAST_OPEN_KEY, Date.now());
-      }, 2 * 60 * 1000);
+      }, 30 * 1000);
     } else if (firstOpen && !secondOpen && shouldOpenAfter(firstOpen, 2)) {
       showPopup();
       localStorage.setItem(SECOND_OPEN_KEY, Date.now());
