@@ -1089,26 +1089,30 @@ document.addEventListener("DOMContentLoaded", function() {
     const SECOND_OPEN_KEY = 'popup_second_open';
     const LAST_OPEN_KEY = 'popup_last_open';
 
-    const now = Date.now();
     const firstOpen = parseInt(localStorage.getItem(FIRST_OPEN_KEY)) || null;
     const secondOpen = parseInt(localStorage.getItem(SECOND_OPEN_KEY)) || null;
     const lastOpen = parseInt(localStorage.getItem(LAST_OPEN_KEY)) || null;
 
-    function shouldOpenAfter(ref, minutes) {
-      return !ref || (Date.now() - ref >= minutes * 60 * 1000);
+    // Enregistre la première visite si jamais pas enregistré
+    if (!firstOpen) {
+      localStorage.setItem(FIRST_OPEN_KEY, Date.now());
     }
 
-    if (!firstOpen && shouldOpenAfter(null, 0.5)) {
-      setTimeout(() => {
-        showPopup();
-        localStorage.setItem(FIRST_OPEN_KEY, Date.now());
-        localStorage.setItem(LAST_OPEN_KEY, Date.now());
-      }, 30 * 1000);
-    } else if (firstOpen && !secondOpen && shouldOpenAfter(firstOpen, 2)) {
-      showPopup();
-      localStorage.setItem(SECOND_OPEN_KEY, Date.now());
-      localStorage.setItem(LAST_OPEN_KEY, Date.now());
-    } else if (secondOpen && shouldOpenAfter(lastOpen, 3)) {
+    // Timer à déclencher 30 sec après un clic (entre 1ère et 2ème ouverture)
+    let timerId = null;
+    document.addEventListener('click', () => {
+      if (firstOpen && !secondOpen && !timerId) {
+        timerId = setTimeout(() => {
+          showPopup();
+          localStorage.setItem(SECOND_OPEN_KEY, Date.now());
+          localStorage.setItem(LAST_OPEN_KEY, Date.now());
+          timerId = null;
+        }, 30 * 1000);
+      }
+    });
+
+    // Popup réouverture toutes les 3 minutes après 2e ouverture
+    if (secondOpen && (Date.now() - lastOpen >= 3 * 60 * 1000)) {
       showPopup();
       localStorage.setItem(LAST_OPEN_KEY, Date.now());
     }
