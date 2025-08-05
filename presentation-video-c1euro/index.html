@@ -28,7 +28,7 @@
         <meta property="og:title" content="Présentation vidéo C1EURO"><meta property="og:image" content="https://c1euro.com/media/website/HOME2.webp"><meta property="og:image:width" content="2200"><meta property="og:image:height" content="1485"><meta property="og:site_name" content="c1euro.com"><meta property="og:description" content="Regardez la vidéo de présentation de C1EURO et découvrez les principales fonctionnalités de l’application en quelques minutes. Simple, rapide et efficace."><meta property="og:url" content="https://c1euro.com/presentation-video-c1euro/"><meta property="og:type" content="article">
 	        <link rel="shortcut icon" href="https://c1euro.com/media/website/LOGO67-2-2-2-2.svg" type="image/x-icon" />
         <link rel="stylesheet" href="https://c1euro.com/assets/css/style.css?v=988e814f8ea64f76964824a2cab90615">
-        <script type="application/ld+json">{"@context":"http://schema.org","@type":"Article","mainEntityOfPage":{"@type":"WebPage","@id":"https://c1euro.com/presentation-video-c1euro/"},"headline":"Présentation vidéo C1EURO","datePublished":"2025-06-26T00:16+02:00","dateModified":"2025-08-05T15:57+02:00","image":{"@type":"ImageObject","url":"https://c1euro.com/media/website/LOGO67-2-2-2.svg","height":46,"width":46},"description":"Regardez la vidéo de présentation de C1EURO et découvrez les principales fonctionnalités de l’application en quelques minutes. Simple, rapide et efficace.","author":{"@type":"Person","name":"c1euro","url":"https://c1euro.com/authors/c1euro/"},"publisher":{"@type":"Organization","name":"c1euro","logo":{"@type":"ImageObject","url":"https://c1euro.com/media/website/LOGO67-2-2-2.svg","height":46,"width":46}}}</script>      
+        <script type="application/ld+json">{"@context":"http://schema.org","@type":"Article","mainEntityOfPage":{"@type":"WebPage","@id":"https://c1euro.com/presentation-video-c1euro/"},"headline":"Présentation vidéo C1EURO","datePublished":"2025-06-26T00:16+02:00","dateModified":"2025-08-05T16:04+02:00","image":{"@type":"ImageObject","url":"https://c1euro.com/media/website/LOGO67-2-2-2.svg","height":46,"width":46},"description":"Regardez la vidéo de présentation de C1EURO et découvrez les principales fonctionnalités de l’application en quelques minutes. Simple, rapide et efficace.","author":{"@type":"Person","name":"c1euro","url":"https://c1euro.com/authors/c1euro/"},"publisher":{"@type":"Organization","name":"c1euro","logo":{"@type":"ImageObject","url":"https://c1euro.com/media/website/LOGO67-2-2-2.svg","height":46,"width":46}}}</script>      
         <noscript>
             <style>
                 img[loading] {
@@ -394,61 +394,35 @@
             </header>
 
             <div class="content__entry">
-               <!-- Conteneur des deux box -->
-<div style="display: flex; flex-wrap: wrap; justify-content: center; gap: 15px; margin: 30px 0; font-family: 'Public Sans', sans-serif;"><!-- Box 1 : Lottie Animation -->
-<div style="flex: 1 1 300px; max-width: 500px; display: flex; align-items: center; justify-content: center; min-height: 140px;">
-<div id="lottie-box1" style="width: 100%; height: 420px;"></div>
-</div>
-<!-- Box 2 : Lottie Animation -->
-<div style="flex: 1 1 300px; max-width: 500px; display: flex; align-items: center; justify-content: center; min-height: 140px;">
-<div id="lottie-box2" style="width: 100%; height: 420px;"></div>
+               <p>&lt;</p>
+<!-- Conteneur global pour le deuxième Lottie avec fond transparent et aucun espace vertical -->
+<div style="display: flex; justify-content: center; align-items: center; padding: 0; margin: 0;">
+<div style="background-color: transparent; border-radius: 0; box-shadow: none; width: 100%; max-width: 100%; margin: 0; display: flex; justify-content: center; align-items: center;">
+<div id="lottie-page04" style="width: 100%; height: 620px; margin: 0; padding: 0;"></div>
 </div>
 </div>
-<!-- Lottie Script -->
 <p>
-<script src="https://cdnjs.cloudflare.com/ajax/libs/bodymovin/5.10.2/lottie.min.js"></script>
 <script>
-  // Animation 1
-  const anim1 = lottie.loadAnimation({
-    container: document.getElementById('lottie-box1'),
+  // Initialise la deuxième animation Lottie
+  const anim4 = lottie.loadAnimation({
+    container: document.getElementById('lottie-page04'),
     renderer: 'svg',
     loop: false,
     autoplay: false,
-    path: '/media/files/beno.json' // <-- adapte le chemin si nécessaire
+    path: '/media/files/bena.json'  // adapte le chemin si besoin
   });
 
-  // Animation 2
-  const anim2 = lottie.loadAnimation({
-    container: document.getElementById('lottie-box2'),
-    renderer: 'svg',
-    loop: false,
-    autoplay: false,
-    path: '/media/files/bena.json' // <-- adapte aussi ici si tu veux une autre anim
-  });
-
-  // Observer pour lancer quand visible
-  const observerOptions = { threshold: 0.7 };
-
-  const observer1 = new IntersectionObserver((entries, observer) => {
-    entries.forEach(entry => {
-      if (entry.isIntersecting) {
-        anim1.play();
-        observer.unobserve(entry.target);
-      }
-    });
-  }, observerOptions);
-
-  const observer2 = new IntersectionObserver((entries, observer) => {
+  // Observer pour lancer l'animation quand visible (seuil 0.1)
+  const observer4 = new IntersectionObserver((entries, observer) => {
     entries.forEach(entry => {
       if (entry.isIntersecting) {
         anim2.play();
         observer.unobserve(entry.target);
       }
     });
-  }, observerOptions);
+  }, { threshold: 0.7 });
 
-  observer1.observe(document.getElementById('lottie-box1'));
-  observer2.observe(document.getElementById('lottie-box2'));
+  observer4.observe(document.getElementById('lottie-page04'));
 </script>
 </p>
 <p class="align-center">Découvrez <strong data-start="199" data-end="209">C1EURO</strong> en vidéo ! En quelques minutes, explorez ses <strong data-start="255" data-end="279">fonctionnalités clés</strong>, son <strong data-start="285" data-end="308">interface intuitive</strong> et les <strong data-start="316" data-end="338">avantages concrets</strong> qu’elle apporte à vos projets. Une <strong data-start="374" data-end="397">présentation claire</strong> pour tout comprendre rapidement.</p>
