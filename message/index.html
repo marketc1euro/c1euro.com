@@ -682,101 +682,102 @@ document.addEventListener("DOMContentLoaded", function() {
   </div>
 </div>
 
-<!-- JS d'ouverture / fermeture / tracking Umami -->
+<!-- JS d'ouverture / fermeture / tracking Umami amélioré -->
 <script>
-  const popup = document.getElementById('popup');
-  const popupCloseBtn = document.getElementById('popup-close');
-  const launchAppBtn = document.getElementById('launch-app-btn');
+  window.addEventListener('load', function () {
+    const popup = document.getElementById('popup');
+    const popupCloseBtn = document.getElementById('popup-close');
+    const launchAppBtn = document.getElementById('launch-app-btn');
 
-  // ✅ Fonction robuste pour Umami
-  function trackUmami(eventName) {
-    const tryTrack = () => {
+    // Fonction de tracking robuste avec retries
+    function trackUmami(eventName, retries = 10) {
       if (typeof window.umami === 'function') {
         window.umami(eventName);
         console.log(`[UMAMI] Événement envoyé : ${eventName}`);
+      } else if (retries > 0) {
+        console.log(`[UMAMI] En attente de chargement pour ${eventName}... Tentatives restantes : ${retries}`);
+        setTimeout(() => trackUmami(eventName, retries - 1), 500);
       } else {
-        console.log(`[UMAMI] En attente de chargement pour ${eventName}...`);
-        setTimeout(tryTrack, 300);
+        console.warn(`[UMAMI] Échec de l'envoi : ${eventName}`);
       }
-    };
-    tryTrack();
-  }
+    }
 
-  function showPopup() {
-    popup.classList.add('show');
-    popup.setAttribute('aria-hidden', 'false');
-    document.body.classList.add('no-scroll');
-  }
+    function showPopup() {
+      popup.classList.add('show');
+      popup.setAttribute('aria-hidden', 'false');
+      document.body.classList.add('no-scroll');
+    }
 
-  function hidePopup() {
-    popup.classList.remove('show');
-    popup.setAttribute('aria-hidden', 'true');
-    document.body.classList.remove('no-scroll');
+    function hidePopup() {
+      popup.classList.remove('show');
+      popup.setAttribute('aria-hidden', 'true');
+      document.body.classList.remove('no-scroll');
 
-    popup.addEventListener('transitionend', function handler() {
-      if (!popup.classList.contains('show')) {
-        popup.style.display = 'none';
+      popup.addEventListener('transitionend', function handler() {
+        if (!popup.classList.contains('show')) {
+          popup.style.display = 'none';
+        }
+        popup.removeEventListener('transitionend', handler);
+      });
+    }
+
+    function openPopup() {
+      popup.style.display = 'flex';
+      setTimeout(() => showPopup(), 10);
+      trackUmami('popup-view');
+    }
+
+    // Clic bouton avec tracking
+    launchAppBtn.addEventListener('click', (e) => {
+      trackUmami('popup-click');
+
+      const isAndroid = /android/i.test(navigator.userAgent);
+      const isIOS = /iPhone|iPad|iPod/i.test(navigator.userAgent);
+      const isMobile = isAndroid || isIOS;
+
+      if (!isMobile) {
+        e.preventDefault();
+        location.reload();
       }
-      popup.removeEventListener('transitionend', handler);
     });
-  }
 
-  function openPopup() {
-    popup.style.display = 'flex';
-    setTimeout(() => showPopup(), 10);
-    trackUmami('popup-view'); // ✅ tracking vue
-  }
+    popupCloseBtn.addEventListener('click', hidePopup);
 
-  // ✅ Tracking clic bouton
-  launchAppBtn.addEventListener('click', (e) => {
-    trackUmami('popup-click');
+    // Logic d'affichage conditionnel
+    (function () {
+      const now = Date.now();
+      let firstOpenTime = parseInt(localStorage.getItem('popup_first_open')) || null;
+      let secondOpenTime = parseInt(localStorage.getItem('popup_second_open')) || null;
+      let lastOpenTime = parseInt(localStorage.getItem('popup_last_open')) || null;
 
-    const isAndroid = /android/i.test(navigator.userAgent);
-    const isIOS = /iPhone|iPad|iPod/i.test(navigator.userAgent);
-    const isMobile = isAndroid || isIOS;
+      function updateTimes(key, value) {
+        localStorage.setItem(key, value.toString());
+      }
 
-    if (!isMobile) {
-      e.preventDefault();
-      location.reload();
-    }
+      function tryOpenPopup() {
+        if (!firstOpenTime) {
+          openPopup();
+          updateTimes('popup_first_open', now);
+          updateTimes('popup_last_open', now);
+          return;
+        }
+
+        if (firstOpenTime && !secondOpenTime && now - firstOpenTime >= 120000) {
+          openPopup();
+          updateTimes('popup_second_open', now);
+          updateTimes('popup_last_open', now);
+          return;
+        }
+
+        if (secondOpenTime && (!lastOpenTime || now - lastOpenTime >= 180000)) {
+          openPopup();
+          updateTimes('popup_last_open', now);
+        }
+      }
+
+      tryOpenPopup();
+    })();
   });
-
-  popupCloseBtn.addEventListener('click', hidePopup);
-
-  // Affichage conditionnel avec localStorage
-  (function () {
-    const now = Date.now();
-    let firstOpenTime = parseInt(localStorage.getItem('popup_first_open')) || null;
-    let secondOpenTime = parseInt(localStorage.getItem('popup_second_open')) || null;
-    let lastOpenTime = parseInt(localStorage.getItem('popup_last_open')) || null;
-
-    function updateTimes(key, value) {
-      localStorage.setItem(key, value.toString());
-    }
-
-    function tryOpenPopup() {
-      if (!firstOpenTime) {
-        openPopup();
-        updateTimes('popup_first_open', now);
-        updateTimes('popup_last_open', now);
-        return;
-      }
-
-      if (firstOpenTime && !secondOpenTime && now - firstOpenTime >= 120000) {
-        openPopup();
-        updateTimes('popup_second_open', now);
-        updateTimes('popup_last_open', now);
-        return;
-      }
-
-      if (secondOpenTime && (!lastOpenTime || now - lastOpenTime >= 180000)) {
-        openPopup();
-        updateTimes('popup_last_open', now);
-      }
-    }
-
-    tryOpenPopup();
-  })();
 </script>
 
 
