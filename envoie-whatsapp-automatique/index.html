@@ -704,11 +704,31 @@ document.addEventListener("DOMContentLoaded", function() {
       <img src="https://c1euro.com/media/posts/25/aabf409156b2bcde53225f3492dda1ba.svg" alt="Fermer" style="width: 100%; height: 100%; display: block;">
     </button>
 
-    <!-- Lottie principale -->
+    <!-- Lottie -->
     <div id="lottie-container" style="width: 300px; height: 300px; margin-bottom: 20px;"></div>
 
-    <!-- Lottie remplaçant le carrousel -->
-    <div id="lottie-carou" style="width: 400px; height: 400px; margin-bottom: 2px;"></div>
+    <!-- Carrousel scrollable -->
+    <div style="display: flex; justify-content: center; width: 100%; margin-bottom: 25px;">
+      <div style="display: flex; gap: 15px; overflow-x: auto; padding: 10px 0; max-width: 100%;">
+        <!-- Box 1 à 4 -->
+        <div style="flex: 0 0 140px; background: #242528; border-radius: 8px; padding: 12px; text-align: center;">
+          <img src="https://c1euro.com/media/posts/15/4cdecc1f11ba304d07d53eac145691a045585410-80x80_Z1T7HQb-2.svg" alt="" style="width: 80px; height: 80px; margin: 0 auto 8px;">
+          <div style="background: #161718; color: #fff; border-radius: 999px; padding: 4px 12px; font-size: 0.85em;">Mode</div>
+        </div>
+        <div style="flex: 0 0 140px; background: #242528; border-radius: 8px; padding: 12px; text-align: center;">
+          <img src="https://c1euro.com/media/posts/15/7c505ae37f53d46df50d526fc771b0084c867e64-80x80_16paFn-1.svg" alt="" style="width: 80px; height: 80px; margin: 0 auto 8px;">
+          <div style="background: #161718; color: #fff; border-radius: 999px; padding: 4px 12px; font-size: 0.85em;">Alimentation</div>
+        </div>
+        <div style="flex: 0 0 140px; background: #242528; border-radius: 8px; padding: 12px; text-align: center;">
+          <img src="https://c1euro.com/media/posts/15/700c06cf291d4a213547eb48733aea2422f06f87-80x80_ZNVBu0.svg" alt="" style="width: 80px; height: 80px; margin: 0 auto 8px;">
+          <div style="background: #161718; color: #fff; border-radius: 999px; padding: 4px 12px; font-size: 0.85em;">High-tech</div>
+        </div>
+        <div style="flex: 0 0 140px; background: #242528; border-radius: 8px; padding: 12px; text-align: center;">
+          <img src="https://c1euro.com/media/posts/15/b430f69d910f82bf07dca72bc21a49aa5887710c-80x80_Zhczk2-1.svg" alt="" style="width: 80px; height: 80px; margin: 0 auto 8px;">
+          <div style="background: #161718; color: #fff; border-radius: 999px; padding: 4px 12px; font-size: 0.85em;">Livreur</div>
+        </div>
+      </div>
+    </div>
 
     <!-- Texte -->
     <div id="popup-desc" style="text-align: center; font-size: 1.2em; margin-bottom: 15px; font-family: 'Public Sans', sans-serif; color: #000;">
@@ -777,9 +797,9 @@ document.addEventListener("DOMContentLoaded", function() {
       setTimeout(() => {
         showPopup();
 
-        // Initialiser Lottie principale
+        // Initialiser Lottie une seule fois
         if (!popup.dataset.lottieLoaded) {
-          const mainLottie = lottie.loadAnimation({
+          const lottieInstance = lottie.loadAnimation({
             container: document.getElementById('lottie-container'),
             renderer: 'svg',
             loop: false,
@@ -790,27 +810,15 @@ document.addEventListener("DOMContentLoaded", function() {
           let playCount = 0;
           const maxPlays = 1;
 
-          mainLottie.addEventListener('complete', () => {
+          lottieInstance.addEventListener('complete', () => {
             playCount++;
             if (playCount < maxPlays) {
-              mainLottie.goToAndPlay(0, true);
+              lottieInstance.goToAndPlay(0, true);
             }
           });
 
-          mainLottie.play();
+          lottieInstance.play();
           popup.dataset.lottieLoaded = "true";
-        }
-
-        // Initialiser Lottie "carou"
-        if (!popup.dataset.carouLoaded) {
-          const carouLottie = lottie.loadAnimation({
-            container: document.getElementById('lottie-carou'),
-            renderer: 'svg',
-            loop: true,
-            autoplay: true,
-            path: '/media/files/carou.json'
-          });
-          popup.dataset.carouLoaded = "true";
         }
 
       }, 10);
