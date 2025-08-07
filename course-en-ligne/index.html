@@ -16,7 +16,7 @@
         <meta property="og:title" content="Course en ligne : Simplifiez vos courses au quotidien"><meta property="og:image" content="https://c1euro.com/media/posts/5/course.webp"><meta property="og:image:width" content="2200"><meta property="og:image:height" content="1485"><meta property="og:site_name" content="c1euro.com"><meta property="og:description" content="Gagnez du temps et évitez la foule. Découvrez comment faire votre course en ligne en quelques clics. Simple, rapide et optimisé pour vous."><meta property="og:url" content="https://c1euro.com/course-en-ligne/"><meta property="og:type" content="article">
 	        <link rel="shortcut icon" href="https://c1euro.com/media/website/LOGO67-2-2-2-2.svg" type="image/x-icon" />
         <link rel="stylesheet" href="https://c1euro.com/assets/css/style.css?v=988e814f8ea64f76964824a2cab90615">
-        <script type="application/ld+json">{"@context":"http://schema.org","@type":"Article","mainEntityOfPage":{"@type":"WebPage","@id":"https://c1euro.com/course-en-ligne/"},"headline":"Course en ligne : Simplifiez vos courses au quotidien","datePublished":"2025-05-29T19:26+02:00","dateModified":"2025-08-07T19:01+02:00","image":{"@type":"ImageObject","url":"https://c1euro.com/media/posts/5/course.webp","height":1485,"width":2200},"description":"Gagnez du temps et évitez la foule. Découvrez comment faire votre course en ligne en quelques clics. Simple, rapide et optimisé pour vous.","author":{"@type":"Person","name":"c1euro","url":"https://c1euro.com/authors/c1euro/"},"publisher":{"@type":"Organization","name":"c1euro","logo":{"@type":"ImageObject","url":"https://c1euro.com/media/website/LOGO67-2-2-2.svg","height":46,"width":46}}}</script>      
+        <script type="application/ld+json">{"@context":"http://schema.org","@type":"Article","mainEntityOfPage":{"@type":"WebPage","@id":"https://c1euro.com/course-en-ligne/"},"headline":"Course en ligne : Simplifiez vos courses au quotidien","datePublished":"2025-05-29T19:26+02:00","dateModified":"2025-08-07T20:31+02:00","image":{"@type":"ImageObject","url":"https://c1euro.com/media/posts/5/course.webp","height":1485,"width":2200},"description":"Gagnez du temps et évitez la foule. Découvrez comment faire votre course en ligne en quelques clics. Simple, rapide et optimisé pour vous.","author":{"@type":"Person","name":"c1euro","url":"https://c1euro.com/authors/c1euro/"},"publisher":{"@type":"Organization","name":"c1euro","logo":{"@type":"ImageObject","url":"https://c1euro.com/media/website/LOGO67-2-2-2.svg","height":46,"width":46}}}</script>      
         <noscript>
             <style>
                 img[loading] {
@@ -470,9 +470,8 @@
 <div class="mx-auto mt-4 max-w-prose markdown" data-sb-field-path=".body">
 <p class="align-center">Notre service de <strong>course en ligne</strong> va bien au-delà de la simple commande. Profitez d'une sélection rigoureuse de produits de qualité, d'une grande réactivité dans la préparation et la mise à disposition de vos commandes, et de prix toujours attractifs.</p>
 <div style="position: relative;">
-<div id="lottie-page11" style="width: 100%; height: 560px; margin-top: 10px;"></div>
-<!-- Bouton replay (caché par défaut) --> <button id="replay-btn" style="position: absolute; top: 50%; left: 50%; transform: translate(-50%, -50%); background: rgba(0,0,0,0.7); color: white; border: none; border-radius: 50%; width: 50px; height: 50px; display: none; cursor: pointer; z-index: 10;"> ▶ </button></div>
-<p>
+<div id="lottie-page11" style="width: 100%; height: auto; aspect-ratio: 16/9; margin: 10px 0;"></div>
+<!-- Bouton replay (caché par défaut) --> <button id="replay-btn" style="position: absolute; top: 50%; left: 50%; transform: translate(-50%, -50%); background: rgba(0,0,0,0.7); color: white; border: none; border-radius: 50%; width: 50px; height: 50px; display: none; cursor: pointer; z-index: 10;">▶</button></div>
 <script>
   const container = document.getElementById('lottie-page11');
   const replayBtn = document.getElementById('replay-btn');
@@ -485,31 +484,64 @@
     path: '/media/files/alimuxo.json'
   });
 
+  // Fonction pour redimensionner le conteneur selon l'animation
+  function resizeContainer() {
+    if (anim11.isLoaded) {
+      const aspectRatio = anim11.renderer.getRendererData().animationData.w / anim11.renderer.getRendererData().animationData.h;
+      container.style.aspectRatio = aspectRatio;
+    }
+  }
+
+  // Quand l'animation est chargée
+  anim11.addEventListener('DOMLoaded', () => {
+    resizeContainer();
+    // Démarrer l'animation si elle est déjà visible
+    if (isElementInViewport(container)) {
+      anim11.play();
+    }
+  });
+
   // Quand l'animation est terminée
   anim11.addEventListener('complete', () => {
-    replayBtn.style.display = 'block'; // Affiche le bouton
+    replayBtn.style.display = 'block';
   });
 
   // Clic sur le bouton pour rejouer
   replayBtn.addEventListener('click', () => {
-    anim11.stop();
+    anim11.goToAndStop(0, true);
     anim11.play();
-    replayBtn.style.display = 'none'; // Cache le bouton
+    replayBtn.style.display = 'none';
   });
+
+  // Fonction pour vérifier si un élément est visible
+  function isElementInViewport(el) {
+    const rect = el.getBoundingClientRect();
+    return (
+      rect.top <= (window.innerHeight || document.documentElement.clientHeight) &&
+      rect.bottom >= 0
+    );
+  }
 
   // Intersection Observer (démarrage auto)
   const observer11 = new IntersectionObserver((entries) => {
     entries.forEach(entry => {
       if (entry.isIntersecting) {
-        anim11.play();
-        replayBtn.style.display = 'none'; // Reset si visible
+        if (anim11.isLoaded) {
+          anim11.play();
+        }
+        replayBtn.style.display = 'none';
+      } else {
+        // Optionnel: pause quand non visible
+        // anim11.pause();
       }
     });
   }, { threshold: 0.7 });
 
   observer11.observe(container);
+
+  // Redimensionnement lors du changement d'orientation
+  window.addEventListener('resize', resizeContainer);
 </script>
-</p>
 <div style="display: flex; flex-wrap: wrap; justify-content: center; gap: 15px; margin: 0px 0 30px 0; font-family: 'Public Sans', sans-serif;">
 <div style="flex: 1 1 300px; max-width: 500px; display: flex; flex-direction: column; justify-content: center; align-items: flex-start; text-align: left; min-height: 140px;">
 <h3>Nos produits pour votre course en ligne</h3>
