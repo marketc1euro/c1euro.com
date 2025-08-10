@@ -310,31 +310,37 @@
     
 <script>
 document.addEventListener("DOMContentLoaded", () => {
-    const allElements = Array.from(document.body.children);
+    const body = document.body;
+    const children = Array.from(body.children);
     const sections = [];
     let currentSection = null;
 
-    // Parcours tous les éléments du body
-    allElements.forEach(el => {
+    // On crée un tableau pour stocker les groupes d'éléments
+    children.forEach(el => {
         if (el.tagName === 'H2') {
-            // Si on rencontre un nouveau H2, on crée une nouvelle section
+            // Nouvelle section à chaque H2
             currentSection = document.createElement('div');
             currentSection.classList.add('full-section');
-            document.body.appendChild(currentSection);
             sections.push(currentSection);
         }
-        if (currentSection) {
-            currentSection.appendChild(el);
+        if (!currentSection) {
+            // Au cas où il y a du contenu avant le premier H2
+            currentSection = document.createElement('div');
+            currentSection.classList.add('full-section');
+            sections.push(currentSection);
         }
+        currentSection.appendChild(el); // on déplace l'élément dans la section en cours
     });
 
-    // Style pour plein écran + scroll snap
+    // On vide le body et on ajoute toutes les sections dans l'ordre
+    body.innerHTML = '';
+    sections.forEach(section => body.appendChild(section));
+
+    // Ajout du style CSS
     const style = document.createElement('style');
     style.textContent = `
         html, body {
-            margin: 0;
-            padding: 0;
-            height: 100%;
+            margin: 0; padding: 0; height: 100%;
             overflow-y: scroll;
             scroll-snap-type: y mandatory;
         }
