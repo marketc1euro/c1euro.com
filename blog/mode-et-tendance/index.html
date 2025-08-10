@@ -307,35 +307,6 @@
   window.addEventListener('load', fixImages);
   window.addEventListener('resize', fixImages);
 </script>
-
-<script>
-document.addEventListener("DOMContentLoaded", () => {
-    const headers = document.querySelectorAll('h2');
-    let currentIndex = 0;
-    let isScrolling = false;
-
-    function scrollToHeader(index) {
-        headers[index].scrollIntoView({behavior: 'smooth', block: 'center'});
-    }
-
-    window.addEventListener('wheel', (event) => {
-        if (isScrolling) return;
-        isScrolling = true;
-
-        if (event.deltaY > 0) {
-            currentIndex = Math.min(currentIndex + 1, headers.length - 1);
-        } else {
-            currentIndex = Math.max(currentIndex - 1, 0);
-        }
-
-        scrollToHeader(currentIndex);
-
-        setTimeout(() => {
-            isScrolling = false;
-        }, 800);
-    });
-});
-</script>
         <div class="container">
 <div class="left-bar">
    <div class="left-bar__inner">
