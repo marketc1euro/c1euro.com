@@ -290,33 +290,56 @@
   window.addEventListener('load', fixImages);
   window.addEventListener('resize', fixImages);
 </script>
-    
-document.addEventListener("DOMContentLoaded", () => {
-    const headers = document.querySelectorAll('h2');
-    let currentIndex = 0;
-    let isScrolling = false;
 
-    function scrollToHeader(index) {
-        headers[index].scrollIntoView({behavior: 'smooth', block: 'center'});
+<script>
+document.addEventListener('DOMContentLoaded', () => {
+  const body = document.body;
+  const children = Array.from(body.children);
+  const sections = [];
+  let currentSection = null;
+
+  children.forEach(el => {
+    if (el.tagName === 'H2') {
+      // Nouvelle section
+      currentSection = document.createElement('div');
+      currentSection.classList.add('full-page-section');
+      sections.push(currentSection);
     }
+    if (!currentSection) {
+      // Si le premier élément n'est pas un H2, on le met dans une section
+      currentSection = document.createElement('div');
+      currentSection.classList.add('full-page-section');
+      sections.push(currentSection);
+    }
+    currentSection.appendChild(el);
+  });
 
-    window.addEventListener('wheel', (event) => {
-        if (isScrolling) return;
-        isScrolling = true;
+  // Vider le body et ajouter les sections regroupées
+  body.innerHTML = '';
+  sections.forEach(section => body.appendChild(section));
 
-        if (event.deltaY > 0) {
-            currentIndex = Math.min(currentIndex + 1, headers.length - 1);
-        } else {
-            currentIndex = Math.max(currentIndex - 1, 0);
-        }
-
-        scrollToHeader(currentIndex);
-
-        setTimeout(() => {
-            isScrolling = false;
-        }, 800);
-    });
+  // Ajouter le CSS nécessaire
+  const style = document.createElement('style');
+  style.textContent = `
+    html, body {
+      margin: 0; padding: 0; height: 100%;
+      overflow-y: scroll;
+      scroll-snap-type: y mandatory;
+    }
+    .full-page-section {
+      height: 100vh;
+      scroll-snap-align: start;
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      align-items: center;
+      box-sizing: border-box;
+      padding: 20px;
+    }
+  `;
+  document.head.appendChild(style);
 });
+</script>
         <div class="container">
 <div class="left-bar">
    <div class="left-bar__inner">
