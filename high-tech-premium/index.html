@@ -207,35 +207,6 @@ C1EURO réunit les meilleures marques high-tech du marché. "><meta property=
   });
 </script>
 
-<style>
-    html {
-        scroll-behavior: smooth;
-    }
-    /* Navigation à billes */
-    .dot-nav {
-        position: fixed;
-        top: 50%;
-        right: 20px;
-        transform: translateY(-50%);
-        display: flex;
-        flex-direction: column;
-        gap: 15px;
-        z-index: 1000;
-        align-items: center;
-    }
-    .dot {
-        width: 20px; /* plus gros */
-        height: 20px;
-        border-radius: 50%;
-        background: #bbb;
-        transition: background 0.3s, transform 0.3s;
-        cursor: pointer;
-    }
-    .dot.active {
-        background: #333;
-        transform: scale(1.5) rotate(360deg);
-    }
-</style>
 
 
 			<link rel="stylesheet" href="https://c1euro.com/media/plugins/coreLightboxGallery/photoswipe.min.css" />
@@ -339,6 +310,80 @@ C1EURO réunit les meilleures marques high-tech du marché. "><meta property=
   window.addEventListener('resize', fixImages);
 </script>
     
+<div class="dot-nav"></div>
+
+<script>
+document.addEventListener("DOMContentLoaded", () => {
+    const headers = document.querySelectorAll('h2');
+    const nav = document.querySelector('.dot-nav');
+    let currentIndex = 0;
+    let isScrolling = false;
+
+    // Seulement 3 billes affichées
+    const visibleDots = 3;
+    let dots = [];
+
+    function renderDots() {
+        nav.innerHTML = '';
+        dots = [];
+
+        for (let i = 0; i < visibleDots; i++) {
+            const dot = document.createElement('div');
+            dot.classList.add('dot');
+            if (i === 0) dot.classList.add('active');
+            dot.addEventListener('click', () => {
+                let targetIndex = (currentIndex + i) % headers.length;
+                currentIndex = targetIndex;
+                scrollToH2(currentIndex);
+            });
+            nav.appendChild(dot);
+            dots.push(dot);
+        }
+    }
+
+    function scrollToH2(index) {
+        headers[index].scrollIntoView({behavior: 'smooth', block: 'center'});
+        updateDots();
+    }
+
+    function updateDots() {
+        dots.forEach((dot, i) => {
+            let targetIndex = (currentIndex + i) % headers.length;
+            dot.classList.toggle('active', targetIndex === currentIndex);
+        });
+    }
+
+    window.addEventListener('wheel', (event) => {
+        if (isScrolling) return;
+        isScrolling = true;
+
+        if (event.deltaY > 0) {
+            currentIndex = (currentIndex + 1) % headers.length;
+        } else {
+            currentIndex = (currentIndex - 1 + headers.length) % headers.length;
+        }
+
+        scrollToH2(currentIndex);
+
+        setTimeout(() => {
+            isScrolling = false;
+        }, 800);
+    });
+
+    window.addEventListener('scroll', () => {
+        let middle = window.innerHeight / 2;
+        headers.forEach((h2, i) => {
+            let rect = h2.getBoundingClientRect();
+            if (rect.top < middle && rect.bottom > middle) {
+                currentIndex = i;
+                updateDots();
+            }
+        });
+    });
+
+    renderDots();
+});
+</script>
 <div class="dot-nav"></div>
 
 <script>
