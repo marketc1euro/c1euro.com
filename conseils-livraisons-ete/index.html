@@ -290,57 +290,6 @@
   window.addEventListener('load', fixImages);
   window.addEventListener('resize', fixImages);
 </script>
-    
-<script>
-document.addEventListener("DOMContentLoaded", () => {
-    const body = document.body;
-    const children = Array.from(body.children);
-    const sections = [];
-    let currentSection = null;
-
-    // On crée un tableau pour stocker les groupes d'éléments
-    children.forEach(el => {
-        if (el.tagName === 'H2') {
-            // Nouvelle section à chaque H2
-            currentSection = document.createElement('div');
-            currentSection.classList.add('full-section');
-            sections.push(currentSection);
-        }
-        if (!currentSection) {
-            // Au cas où il y a du contenu avant le premier H2
-            currentSection = document.createElement('div');
-            currentSection.classList.add('full-section');
-            sections.push(currentSection);
-        }
-        currentSection.appendChild(el); // on déplace l'élément dans la section en cours
-    });
-
-    // On vide le body et on ajoute toutes les sections dans l'ordre
-    body.innerHTML = '';
-    sections.forEach(section => body.appendChild(section));
-
-    // Ajout du style CSS
-    const style = document.createElement('style');
-    style.textContent = `
-        html, body {
-            margin: 0; padding: 0; height: 100%;
-            overflow-y: scroll;
-            scroll-snap-type: y mandatory;
-        }
-        .full-section {
-            min-height: 100vh;
-            scroll-snap-align: start;
-            display: flex;
-            flex-direction: column;
-            justify-content: center;
-            align-items: center;
-            padding: 20px;
-            box-sizing: border-box;
-        }
-    `;
-    document.head.appendChild(style);
-});
-</script>
         <div class="container">
 <div class="left-bar">
    <div class="left-bar__inner">
