@@ -13,10 +13,10 @@
         <link rel="alternate" type="application/atom+xml" href="https://c1euro.com/feed.xml" title="c1euro.com - RSS">
 <link rel="alternate" type="application/json" href="https://c1euro.com/feed.json" title="c1euro.com - JSON">
 
-        <meta property="og:title" content="Support Live chat"><meta property="og:image" content="https://c1euro.com/media/website/HOME2.webp"><meta property="og:image:width" content="2200"><meta property="og:image:height" content="1485"><meta property="og:site_name" content="c1euro.com"><meta property="og:description" content="function adjustTawkSize() { var chatBox = document.getElementById('tawk_689a679f63e952192907c86c'); if (window.innerWidth document.querySelector('h1.content__title')?.remove();"><meta property="og:url" content="https://c1euro.com/support-live-chat/"><meta property="og:type" content="article">
+        <meta property="og:title" content="Support Live chat"><meta property="og:image" content="https://c1euro.com/media/website/HOME2.webp"><meta property="og:image:width" content="2200"><meta property="og:image:height" content="1485"><meta property="og:site_name" content="c1euro.com"><meta property="og:description" content="// Empêche le zoom automatique sur mobile function preventZoomOnMobile() { var metaViewport&hellip;"><meta property="og:url" content="https://c1euro.com/support-live-chat/"><meta property="og:type" content="article">
 	        <link rel="shortcut icon" href="https://c1euro.com/media/website/LOGO67-2-2-2-2.svg" type="image/x-icon" />
         <link rel="stylesheet" href="https://c1euro.com/assets/css/style.css?v=988e814f8ea64f76964824a2cab90615">
-        <script type="application/ld+json">{"@context":"http://schema.org","@type":"Article","mainEntityOfPage":{"@type":"WebPage","@id":"https://c1euro.com/support-live-chat/"},"headline":"Support Live chat","datePublished":"2025-08-12T00:02+02:00","dateModified":"2025-08-13T23:15+02:00","image":{"@type":"ImageObject","url":"https://c1euro.com/media/website/LOGO67-2-2-2.svg","height":46,"width":46},"description":"function adjustTawkSize() { var chatBox = document.getElementById('tawk_689a679f63e952192907c86c'); if (window.innerWidth document.querySelector('h1.content__title')?.remove();","author":{"@type":"Person","name":"c1euro","url":"https://c1euro.com/authors/c1euro/"},"publisher":{"@type":"Organization","name":"c1euro","logo":{"@type":"ImageObject","url":"https://c1euro.com/media/website/LOGO67-2-2-2.svg","height":46,"width":46}}}</script>      
+        <script type="application/ld+json">{"@context":"http://schema.org","@type":"Article","mainEntityOfPage":{"@type":"WebPage","@id":"https://c1euro.com/support-live-chat/"},"headline":"Support Live chat","datePublished":"2025-08-12T00:02+02:00","dateModified":"2025-08-13T23:31+02:00","image":{"@type":"ImageObject","url":"https://c1euro.com/media/website/LOGO67-2-2-2.svg","height":46,"width":46},"description":"// Empêche le zoom automatique sur mobile function preventZoomOnMobile() { var metaViewport&hellip;","author":{"@type":"Person","name":"c1euro","url":"https://c1euro.com/authors/c1euro/"},"publisher":{"@type":"Organization","name":"c1euro","logo":{"@type":"ImageObject","url":"https://c1euro.com/media/website/LOGO67-2-2-2.svg","height":46,"width":46}}}</script>      
         <noscript>
             <style>
                 img[loading] {
@@ -384,6 +384,18 @@
 </div>
 <p>
 <script type="text/javascript">
+  // Empêche le zoom automatique sur mobile
+  function preventZoomOnMobile() {
+    var metaViewport = document.querySelector('meta[name="viewport"]');
+    if (!metaViewport) {
+      metaViewport = document.createElement('meta');
+      metaViewport.name = "viewport";
+      document.head.appendChild(metaViewport);
+    }
+    metaViewport.content = "width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no";
+  }
+  preventZoomOnMobile();
+
   function adjustTawkSize() {
     var chatBox = document.getElementById('tawk_689a679f63e952192907c86c');
     if (window.innerWidth <= 1024) {
@@ -398,13 +410,15 @@
       chatBox.style.boxShadow = 'none';
     }
   }
+
   window.addEventListener('resize', adjustTawkSize);
   window.addEventListener('load', adjustTawkSize);
 
   var Tawk_API = Tawk_API || {}, Tawk_LoadStart = new Date();
   Tawk_API.embedded = 'tawk_689a679f63e952192907c86c';
   (function(){
-    var s1 = document.createElement("script"), s0 = document.getElementsByTagName("script")[0];
+    var s1 = document.createElement("script"),
+        s0 = document.getElementsByTagName("script")[0];
     s1.async = true;
     s1.src = 'https://embed.tawk.to/689a679f63e952192907c86c/1j2djfhle';
     s1.charset = 'UTF-8';
