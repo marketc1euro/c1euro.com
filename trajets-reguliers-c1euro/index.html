@@ -291,10 +291,6 @@
   window.addEventListener('resize', fixImages);
 </script>
 
-<div id="search-box">
-  <input type="text" id="search-input" placeholder="Rechercher une page par URL...">
-  <ul id="results"></ul>
-</div>
 
 <!-- Scripts juste avant la fermeture du body -->
 <script src="https://cdn.jsdelivr.net/npm/lunr/lunr.min.js"></script>
