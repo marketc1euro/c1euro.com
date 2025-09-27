@@ -290,6 +290,45 @@
   window.addEventListener('load', fixImages);
   window.addEventListener('resize', fixImages);
 </script>
+
+<script src="https://cdn.jsdelivr.net/npm/lunr/lunr.min.js"></script>
+<script>
+  let idx, pagesIndex;
+
+  // Charger le search.json
+  fetch('/search.json')
+    .then(response => response.json())
+    .then(data => {
+      pagesIndex = data;
+
+      // Créer l'index Lunr uniquement sur le champ URL
+      idx = lunr(function () {
+        this.ref('url');
+        this.field('url');
+        data.forEach(doc => this.add(doc), this);
+      });
+    });
+
+  // Gérer la saisie utilisateur
+  document.getElementById('search-input').addEventListener('input', function() {
+    const query = this.value.trim();
+    const resultsList = document.getElementById('results');
+    resultsList.innerHTML = '';
+
+    if (!query) return;
+
+    const results = idx.search(query);
+
+    results.forEach(result => {
+      const item = pagesIndex.find(page => page.url === result.ref);
+      if (item) {
+        const li = document.createElement('li');
+        li.innerHTML = `<a href="${item.url}">${item.url}</a>`;
+        resultsList.appendChild(li);
+      }
+    });
+  });
+</script>
         <div class="container">
 <div class="left-bar">
    <div class="left-bar__inner">
