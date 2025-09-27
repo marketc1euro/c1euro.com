@@ -16,7 +16,7 @@
         <meta property="og:title" content="Contactez-nous"><meta property="og:image" content="https://c1euro.com/media/website/HOME2.webp"><meta property="og:image:width" content="2200"><meta property="og:image:height" content="1485"><meta property="og:site_name" content="c1euro.com"><meta property="og:description" content="Cliquez ci-dessous pour accéder au formulaire de contacts Envoyez-nous un message Support&hellip;"><meta property="og:url" content="https://c1euro.com/contactez-nous/"><meta property="og:type" content="article">
 	        <link rel="shortcut icon" href="https://c1euro.com/media/website/LOGO67-2-2-2-2.svg" type="image/x-icon" />
         <link rel="stylesheet" href="https://c1euro.com/assets/css/style.css?v=988e814f8ea64f76964824a2cab90615">
-        <script type="application/ld+json">{"@context":"http://schema.org","@type":"Article","mainEntityOfPage":{"@type":"WebPage","@id":"https://c1euro.com/contactez-nous/"},"headline":"Contactez-nous","datePublished":"2025-05-30T12:33+02:00","dateModified":"2025-09-27T14:19+02:00","image":{"@type":"ImageObject","url":"https://c1euro.com/media/website/LOGO67-2-2-2.svg","height":46,"width":46},"description":"Cliquez ci-dessous pour accéder au formulaire de contacts Envoyez-nous un message Support&hellip;","author":{"@type":"Person","name":"c1euro","url":"https://c1euro.com/authors/c1euro/"},"publisher":{"@type":"Organization","name":"c1euro","logo":{"@type":"ImageObject","url":"https://c1euro.com/media/website/LOGO67-2-2-2.svg","height":46,"width":46}}}</script>      
+        <script type="application/ld+json">{"@context":"http://schema.org","@type":"Article","mainEntityOfPage":{"@type":"WebPage","@id":"https://c1euro.com/contactez-nous/"},"headline":"Contactez-nous","datePublished":"2025-05-30T12:33+02:00","dateModified":"2025-09-27T14:59+02:00","image":{"@type":"ImageObject","url":"https://c1euro.com/media/website/LOGO67-2-2-2.svg","height":46,"width":46},"description":"Cliquez ci-dessous pour accéder au formulaire de contacts Envoyez-nous un message Support&hellip;","author":{"@type":"Person","name":"c1euro","url":"https://c1euro.com/authors/c1euro/"},"publisher":{"@type":"Organization","name":"c1euro","logo":{"@type":"ImageObject","url":"https://c1euro.com/media/website/LOGO67-2-2-2.svg","height":46,"width":46}}}</script>      
         <noscript>
             <style>
                 img[loading] {
@@ -431,15 +431,15 @@
 </script>
 </p>
 <p> </p>
-<!-- Barre de recherche -->
-<div id="search-container" style="margin: 20px 0; position: relative;"><input id="search-input" style="padding: 8px; width: 300px; border-radius: 4px; border: 1px solid #ccc;" type="text" placeholder="Tapez un mot-clé...">
-<ul id="search-results" style="list-style: none; margin: 0; padding: 0; position: absolute; top: 38px; left: 0; width: 300px; border: 1px solid #ccc; border-radius: 4px; background: #fff; max-height: 200px; overflow-y: auto; display: none;"></ul>
-</div>
+<!-- Barre de recherche centrée -->
+<div id="search-container" style="display: flex; justify-content: center; margin: 40px 0; position: relative;"><input id="search-input" style="padding: 10px 20px; width: 400px; border-radius: 30px; border: 1px solid #ccc; font-size: 16px;" type="text" placeholder="Tapez un mot-clé..."></div>
+<!-- Résultats -->
+<div id="search-results-container" style="display: flex; flex-direction: column; align-items: center; margin-top: 10px;"></div>
 <p>
 <script>
 let pagesIndex = [];
 
-// Charger le fichier JSON
+// Exemple : ton JSON devrait contenir {title, url, image} pour chaque page
 fetch('/search.json')
   .then(response => response.json())
   .then(data => {
@@ -447,52 +447,63 @@ fetch('/search.json')
   });
 
 const input = document.getElementById('search-input');
-const resultsList = document.getElementById('search-results');
+const resultsContainer = document.getElementById('search-results-container');
 
-// Afficher les propositions en temps réel
 input.addEventListener('input', function() {
   const query = input.value.trim().toLowerCase();
-  resultsList.innerHTML = '';
+  resultsContainer.innerHTML = '';
   
-  if (!query) {
-    resultsList.style.display = 'none';
-    return;
-  }
+  if (!query) return;
 
-  // Chercher les pages qui contiennent le mot-clé
+  // Filtrer les pages qui correspondent
   const matches = pagesIndex.filter(p => p.title.toLowerCase().includes(query));
 
-  if (matches.length === 0) {
-    resultsList.style.display = 'none';
-    return;
-  }
-
   matches.forEach(p => {
-    const li = document.createElement('li');
-    li.textContent = p.title;
-    li.style.padding = '5px';
-    li.style.cursor = 'pointer';
+    const resultDiv = document.createElement('div');
+    resultDiv.style.display = 'flex';
+    resultDiv.style.alignItems = 'center';
+    resultDiv.style.width = '400px';
+    resultDiv.style.margin = '5px 0';
+    resultDiv.style.padding = '8px';
+    resultDiv.style.border = '1px solid #ddd';
+    resultDiv.style.borderRadius = '12px';
+    resultDiv.style.cursor = 'pointer';
+    resultDiv.style.backgroundColor = '#fff';
+    resultDiv.style.boxShadow = '0 2px 5px rgba(0,0,0,0.1)';
+
+    // Image de la page
+    const img = document.createElement('img');
+    img.src = p.image || ''; // mettre une image par défaut si nécessaire
+    img.style.width = '50px';
+    img.style.height = '50px';
+    img.style.objectFit = 'cover';
+    img.style.borderRadius = '8px';
+    img.style.marginRight = '10px';
     
-    li.addEventListener('click', function() {
+    // Titre
+    const title = document.createElement('span');
+    title.textContent = p.title;
+    title.style.fontSize = '16px';
+    title.style.color = '#333';
+
+    resultDiv.appendChild(img);
+    resultDiv.appendChild(title);
+
+    // Clic → redirection
+    resultDiv.addEventListener('click', function() {
       window.location.href = p.url;
     });
 
-    resultsList.appendChild(li);
+    resultsContainer.appendChild(resultDiv);
   });
-
-  resultsList.style.display = 'block';
 });
 
-// Gérer Entrée
+// Entrée = aller sur le premier résultat
 input.addEventListener('keydown', function(e) {
   if (e.key === 'Enter') {
-    e.preventDefault();
-    const query = input.value.trim().toLowerCase();
-    const page = pagesIndex.find(p => p.title.toLowerCase().includes(query));
-    if (page) {
-      window.location.href = page.url;
-    } else {
-      alert('Aucune page trouvée pour ce mot-clé.');
+    const firstResult = resultsContainer.querySelector('div');
+    if (firstResult) {
+      firstResult.click();
     }
   }
 });
