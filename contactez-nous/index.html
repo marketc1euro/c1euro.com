@@ -16,7 +16,7 @@
         <meta property="og:title" content="Contactez-nous"><meta property="og:image" content="https://c1euro.com/media/website/HOME2.webp"><meta property="og:image:width" content="2200"><meta property="og:image:height" content="1485"><meta property="og:site_name" content="c1euro.com"><meta property="og:description" content="Cliquez ci-dessous pour accéder au formulaire de contacts Envoyez-nous un message Support&hellip;"><meta property="og:url" content="https://c1euro.com/contactez-nous/"><meta property="og:type" content="article">
 	        <link rel="shortcut icon" href="https://c1euro.com/media/website/LOGO67-2-2-2-2.svg" type="image/x-icon" />
         <link rel="stylesheet" href="https://c1euro.com/assets/css/style.css?v=988e814f8ea64f76964824a2cab90615">
-        <script type="application/ld+json">{"@context":"http://schema.org","@type":"Article","mainEntityOfPage":{"@type":"WebPage","@id":"https://c1euro.com/contactez-nous/"},"headline":"Contactez-nous","datePublished":"2025-05-30T12:33+02:00","dateModified":"2025-09-27T13:37+02:00","image":{"@type":"ImageObject","url":"https://c1euro.com/media/website/LOGO67-2-2-2.svg","height":46,"width":46},"description":"Cliquez ci-dessous pour accéder au formulaire de contacts Envoyez-nous un message Support&hellip;","author":{"@type":"Person","name":"c1euro","url":"https://c1euro.com/authors/c1euro/"},"publisher":{"@type":"Organization","name":"c1euro","logo":{"@type":"ImageObject","url":"https://c1euro.com/media/website/LOGO67-2-2-2.svg","height":46,"width":46}}}</script>      
+        <script type="application/ld+json">{"@context":"http://schema.org","@type":"Article","mainEntityOfPage":{"@type":"WebPage","@id":"https://c1euro.com/contactez-nous/"},"headline":"Contactez-nous","datePublished":"2025-05-30T12:33+02:00","dateModified":"2025-09-27T13:58+02:00","image":{"@type":"ImageObject","url":"https://c1euro.com/media/website/LOGO67-2-2-2.svg","height":46,"width":46},"description":"Cliquez ci-dessous pour accéder au formulaire de contacts Envoyez-nous un message Support&hellip;","author":{"@type":"Person","name":"c1euro","url":"https://c1euro.com/authors/c1euro/"},"publisher":{"@type":"Organization","name":"c1euro","logo":{"@type":"ImageObject","url":"https://c1euro.com/media/website/LOGO67-2-2-2.svg","height":46,"width":46}}}</script>      
         <noscript>
             <style>
                 img[loading] {
@@ -290,50 +290,6 @@
   window.addEventListener('load', fixImages);
   window.addEventListener('resize', fixImages);
 </script>
-
-
-<script src="https://cdn.jsdelivr.net/npm/lunr/lunr.min.js"></script>
-<script>
-document.addEventListener('DOMContentLoaded', function() {
-  let idx, pagesIndex;
-
-  // Charger search.json
-  fetch('./search.json')
-    .then(response => response.json())
-    .then(data => {
-      pagesIndex = data;
-
-      // Créer l'index Lunr sur le titre et l'URL
-      idx = lunr(function() {
-        this.ref('url');
-        this.field('title');
-        data.forEach(doc => this.add(doc), this);
-      });
-    })
-    .catch(err => console.error('Erreur fetch search.json:', err));
-
-  const input = document.getElementById('search-input');
-  const resultsList = document.getElementById('results');
-
-  input.addEventListener('input', function() {
-    const query = this.value.trim();
-    resultsList.innerHTML = '';
-
-    if (!query || !idx) return;
-
-    const results = idx.search(query);
-
-    results.forEach(result => {
-      const item = pagesIndex.find(page => page.url === result.ref);
-      if (item) {
-        const li = document.createElement('li');
-        li.innerHTML = `<a href="${item.url}" style="text-decoration:none;">${item.title}</a>`;
-        resultsList.appendChild(li);
-      }
-    });
-  });
-});
-</script>
         <div class="container">
 <div class="left-bar">
    <div class="left-bar__inner">
@@ -475,9 +431,43 @@ document.addEventListener('DOMContentLoaded', function() {
 </script>
 </p>
 <p> </p>
-<div id="search-box"><input id="search-input" type="text" placeholder="Rechercher une page par URL...">
-<ul id="results"></ul>
-</div>
+<!-- Barre de recherche -->
+<div id="search-container" style="margin: 20px 0;"><input id="search-input" style="padding: 8px; width: 300px; border-radius: 4px; border: 1px solid #ccc;" type="text" placeholder="Tapez un mot-clé et appuyez Entrée"></div>
+<!-- Script de recherche -->
+<p>
+<script>
+  let pagesIndex = [];
+
+  // Charger le fichier JSON
+  fetch('/search.json')
+    .then(response => response.json())
+    .then(data => {
+      pagesIndex = data;
+    });
+
+  // Récupérer l'input
+  const input = document.getElementById('search-input');
+
+  // Détecter Entrée
+  input.addEventListener('keydown', function(e) {
+    if (e.key === 'Enter') {
+      e.preventDefault();
+      const query = input.value.trim().toLowerCase();
+      if (!query) return;
+
+      // Chercher dans les titres
+      const page = pagesIndex.find(p => p.title.toLowerCase().includes(query));
+
+      if (page) {
+        // Redirection vers la page correspondante
+        window.location.href = page.url;
+      } else {
+        alert('Aucune page trouvée pour ce mot-clé.');
+      }
+    }
+  });
+</script>
+</p>
             </div>     
 
                <footer class="content__footer">
