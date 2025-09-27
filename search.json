@@ -1,44 +1,58 @@
 [
   {
+    "title": "Accueil Ville",
     "url": "/accueil/ville/"
   },
   {
+    "title": "Assets",
     "url": "/assets/"
   },
   {
+    "title": "Authors C1euro",
     "url": "/authors/c1euro/"
   },
   {
+    "title": "Blog",
     "url": "/blog/"
   },
   {
+    "title": "Conditions Générales",
     "url": "/conditions-generales/"
   },
   {
+    "title": "Conseils Livraisons Été",
     "url": "/conseils-livraisons-ete/"
   },
   {
+    "title": "Contactez-nous",
     "url": "/contactez-nous/"
   },
   {
+    "title": "Course en Ligne",
     "url": "/course-en-ligne/"
   },
   {
+    "title": "Destockage Magasin Pas Cher C1euro",
     "url": "/destockage-magasin-pas-cher-c1euro/"
   },
   {
+    "title": "Email",
     "url": "/email/"
   },
   {
+    "title": "Emploi Étudiant",
     "url": "/emploi-etudiant/"
   },
   {
+    "title": "Emploi",
     "url": "/emploi/"
   },
   {
+    "title": "Envoi de Mail Automatique",
     "url": "/envoi-de-mail-automatique/"
   },
   {
+    "title": "Envoie Whatsapp Automatique",
     "url": "/envoie-whatsapp-automatique/"
   }
 ]
