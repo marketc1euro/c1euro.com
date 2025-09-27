@@ -291,12 +291,19 @@
   window.addEventListener('resize', fixImages);
 </script>
 
+<div id="search-box">
+  <input type="text" id="search-input" placeholder="Rechercher une page par URL...">
+  <ul id="results"></ul>
+</div>
+
+<!-- Scripts juste avant la fermeture du body -->
 <script src="https://cdn.jsdelivr.net/npm/lunr/lunr.min.js"></script>
 <script>
+document.addEventListener('DOMContentLoaded', function() {
   let idx, pagesIndex;
 
-  // Charger le search.json
-  fetch('/search.json')
+  // Charger search.json
+  fetch('./search.json')  // ici './search.json' si le fichier est dans le même dossier
     .then(response => response.json())
     .then(data => {
       pagesIndex = data;
@@ -307,7 +314,8 @@
         this.field('url');
         data.forEach(doc => this.add(doc), this);
       });
-    });
+    })
+    .catch(err => console.error('Erreur fetch search.json:', err));
 
   // Gérer la saisie utilisateur
   document.getElementById('search-input').addEventListener('input', function() {
@@ -315,7 +323,7 @@
     const resultsList = document.getElementById('results');
     resultsList.innerHTML = '';
 
-    if (!query) return;
+    if (!query || !idx) return;
 
     const results = idx.search(query);
 
@@ -328,6 +336,7 @@
       }
     });
   });
+});
 </script>
         <div class="container">
 <div class="left-bar">
