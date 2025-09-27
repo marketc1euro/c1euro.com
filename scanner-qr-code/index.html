@@ -292,31 +292,31 @@
 </script>
 
 
-<!-- Scripts juste avant la fermeture du body -->
 <script src="https://cdn.jsdelivr.net/npm/lunr/lunr.min.js"></script>
 <script>
 document.addEventListener('DOMContentLoaded', function() {
   let idx, pagesIndex;
 
   // Charger search.json
-  fetch('./search.json')  // ici './search.json' si le fichier est dans le même dossier
+  fetch('./search.json')
     .then(response => response.json())
     .then(data => {
       pagesIndex = data;
 
-      // Créer l'index Lunr uniquement sur le champ URL
-      idx = lunr(function () {
+      // Créer l'index Lunr sur le titre et l'URL
+      idx = lunr(function() {
         this.ref('url');
-        this.field('url');
+        this.field('title');
         data.forEach(doc => this.add(doc), this);
       });
     })
     .catch(err => console.error('Erreur fetch search.json:', err));
 
-  // Gérer la saisie utilisateur
-  document.getElementById('search-input').addEventListener('input', function() {
+  const input = document.getElementById('search-input');
+  const resultsList = document.getElementById('results');
+
+  input.addEventListener('input', function() {
     const query = this.value.trim();
-    const resultsList = document.getElementById('results');
     resultsList.innerHTML = '';
 
     if (!query || !idx) return;
@@ -327,7 +327,7 @@ document.addEventListener('DOMContentLoaded', function() {
       const item = pagesIndex.find(page => page.url === result.ref);
       if (item) {
         const li = document.createElement('li');
-        li.innerHTML = `<a href="${item.url}">${item.url}</a>`;
+        li.innerHTML = `<a href="${item.url}" style="text-decoration:none;">${item.title}</a>`;
         resultsList.appendChild(li);
       }
     });
